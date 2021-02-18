@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  margin: 2rem;
+  @include tablet-landscape-up {
+    margin: 2rem 4rem;
+  }
+}
+.flex {
+  display: flex;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.ai-c {
+  align-items: center;
+}
+ul {
+  list-style: none;
+}

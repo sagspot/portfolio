@@ -1,0 +1,42 @@
+.footer {
+  color: $white;
+  background: $gray;
+  &-wrapper {
+    text-align: center;
+    padding: 2rem;
+    @include tablet-landscape-up {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+    }
+  }
+  .logo {
+    display: block;
+    margin-bottom: 1rem;
+    @include tablet-landscape-up {
+      margin-bottom: unset;
+    }
+  }
+  .social-links {
+    justify-content: center;
+    margin-bottom: 1rem;
+    @include tablet-landscape-up {
+      margin-bottom: unset;
+    }
+    a {
+      display: inline-block;
+    }
+    svg {
+      transform: scale(0.6);
+      path {
+        transition: fill 0.2s ease-in-out;
+      }
+      &:hover {
+        path {
+          fill: blueviolet;
+        }
+      }
+    }
+  }
+}

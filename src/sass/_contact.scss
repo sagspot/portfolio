@@ -1,0 +1,29 @@
+.contact {
+  background: $light-gray;
+  h2 {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  &-items {
+    flex-direction: column;
+    margin-bottom: 2rem;
+    @include tablet-landscape-up {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    a {
+      margin: 1rem auto;
+      min-width: 300px;
+      padding: 0.25rem 1rem;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 0 7px 1px rgba($color: $gray, $alpha: 0.25);
+      svg {
+        transform: scale(0.6);
+      }
+      &:hover {
+        box-shadow: 0 2px 7px 4px rgba($color: $gray, $alpha: 0.25);
+      }
+    }
+  }
+}

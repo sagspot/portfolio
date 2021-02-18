@@ -1,0 +1,30 @@
+@function rem($value) {
+  @return $value/16 * 1rem;
+}
+
+// Breakpoints
+@mixin phone-only {
+  @media (max-width: rem(599)) {
+    @content;
+  }
+}
+@mixin tablet-portrait-up {
+  @media (min-width: rem(600)) {
+    @content;
+  }
+}
+@mixin tablet-landscape-up {
+  @media (min-width: rem(900)) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  @media (min-width: rem(1200)) {
+    @content;
+  }
+}
+@mixin big-desktop-up {
+  @media (min-width: rem(1800)) {
+    @content;
+  }
+}
