@@ -79,6 +79,9 @@
           border-radius: 8px;
           transition: transform 0.3s ease-in-out;
           background: $gray;
+          background-size: cover;
+          background-position: top center;
+          background-repeat: no-repeat;
         }
       }
       &-content {
@@ -94,21 +97,6 @@
       &-btns {
         justify-content: space-around;
       }
-      /*
-      &-btn {
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        margin-bottom: 1.5rem;
-        transition: background 0.2s ease-in-out;
-        background: $gray;
-        svg {
-          margin-right: 8px;
-        }
-        &:hover {
-          background: lighten($gray, 20%);
-        }
-      }
-      */
     }
   }
 }

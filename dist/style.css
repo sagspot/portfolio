@@ -382,24 +382,6 @@ header {
   transform: scale(1.1);
 }
 
-.portfolio-card .card {
-  /*
-      &-btn {
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        margin-bottom: 1.5rem;
-        transition: background 0.2s ease-in-out;
-        background: $gray;
-        svg {
-          margin-right: 8px;
-        }
-        &:hover {
-          background: lighten($gray, 20%);
-        }
-      }
-      */
-}
-
 .portfolio-card .card-preview {
   position: absolute;
   justify-content: center;
@@ -420,6 +402,9 @@ header {
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
   background: #4f4f4f;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .portfolio-card .card-content {
