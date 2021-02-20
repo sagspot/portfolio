@@ -46,6 +46,10 @@ ul {
   list-style: none;
 }
 
+.no-outline {
+  outline: none;
+}
+
 header {
   min-height: 100vh;
   background: url("./assets/small.jpg"), #4f4f4f;
@@ -78,6 +82,10 @@ header {
   z-index: 1000;
 }
 
+.nav-center {
+  padding: 0.75rem 0;
+}
+
 @media (min-width: 56.25rem) {
   .nav-center {
     display: flex;
@@ -88,6 +96,12 @@ header {
 
 .nav-brand {
   padding-bottom: 1rem;
+}
+
+@media (min-width: 56.25rem) {
+  .nav-brand {
+    padding-bottom: unset;
+  }
 }
 
 .nav-toggle {
@@ -147,7 +161,7 @@ header {
 }
 
 .nav-links .links a {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   display: block;
@@ -155,10 +169,33 @@ header {
   font-weight: bold;
   padding: 0.75rem 0;
   transition: all 0.3s ease-in-out;
+  outline: none;
+  position: relative;
+}
+
+@media (min-width: 56.25rem) {
+  .nav-links .links a {
+    padding: unset;
+  }
+}
+
+.nav-links .links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  width: 100%;
+  color: white;
 }
 
 .nav-links .links a:hover {
-  transform: translateX(5px);
+  transform: translateX(0.5rem);
+}
+
+@media (min-width: 56.25rem) {
+  .nav-links .links a:hover {
+    transform: unset;
+  }
 }
 
 .show-links .nav-toggle {
@@ -260,15 +297,16 @@ header {
 
 .about-software .items li svg {
   margin-top: 0.25rem;
+  outline: none;
   cursor: pointer;
 }
 
 .about-software .items li svg path {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .about-software .items li svg:hover path {
-  fill: #0691bb;
+  fill: dimgray;
 }
 
 .portfolio {
@@ -454,6 +492,7 @@ header {
   transform: translateX(-50%);
   width: 80px;
   border-radius: 50%;
+  border: 0.125rem solid #f2f2f2;
 }
 
 .testimonial-content h3 {
@@ -498,8 +537,17 @@ header {
   transform: scale(0.6);
 }
 
+.contact-items a svg path {
+  transition: fill 0.2s ease-in-out;
+}
+
 .contact-items a:hover {
+  color: #5c5c5c;
   box-shadow: 0 2px 7px 4px rgba(79, 79, 79, 0.25);
+}
+
+.contact-items a:hover path {
+  fill: dimgray;
 }
 
 .footer {
@@ -549,13 +597,15 @@ header {
 
 .footer .social-links svg {
   transform: scale(0.6);
+  transition: transform 0.2s ease-in-out;
+  outline: none;
 }
 
-.footer .social-links svg path {
-  transition: fill 0.2s ease-in-out;
+.footer .social-links svg:hover {
+  transform: scale(0.7);
 }
 
-.footer .social-links svg:hover path {
-  fill: blueviolet;
+.footer .social-links svg:active {
+  transform: scale(0.6);
 }
 /*# sourceMappingURL=style.css.map */

@@ -20,8 +20,15 @@
       box-shadow: 0 0 7px 1px rgba($color: $gray, $alpha: 0.25);
       svg {
         transform: scale(0.6);
+        path {
+          transition: fill 0.2s ease-in-out;
+        }
       }
       &:hover {
+        color: lighten($gray, 5%);
+        path {
+          fill: lighten($gray, 10%);
+        }
         box-shadow: 0 2px 7px 4px rgba($color: $gray, $alpha: 0.25);
       }
     }

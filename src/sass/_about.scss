@@ -33,13 +33,14 @@
         text-transform: uppercase;
         svg {
           margin-top: 0.25rem;
+          outline: none;
           cursor: pointer;
           path {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.2s ease-in-out;
           }
           &:hover {
             path {
-              fill: #0691bb;
+              fill: lighten($gray, 10%);
             }
           }
         }
