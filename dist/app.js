@@ -12,7 +12,7 @@ const cards = [
     id: 1,
     title: 'cvPoa',
     category: 'websites',
-    img: '/dist/assets/',
+    img: '/dist/assets/sagala.jpg',
     desc:
       'cvPoa is an online cv builder. Users choose a template, fill in their details and download',
   },
@@ -20,7 +20,7 @@ const cards = [
     id: 2,
     title: 'Bookmark',
     category: 'websites',
-    img: '/dist/assets/',
+    img: '/dist/assets/eboso.jpg',
     desc:
       'Bookmark is an online cv builder. Users choose a template, fill in their details and download',
   },
@@ -28,7 +28,7 @@ const cards = [
     id: 3,
     title: 'Afya Mtaani',
     category: 'graphics',
-    img: '/dist/assets/',
+    img: '/dist/assets/william.jpg',
     desc:
       'Afya Mtaani is an online cv builder. Users choose a template, fill in their details and download',
   },
