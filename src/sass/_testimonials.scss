@@ -8,6 +8,7 @@
     z-index: 100;
   }
   &-wrapper {
+    border-radius: rem(8);
     background: $mid-gray;
   }
   &-content {
