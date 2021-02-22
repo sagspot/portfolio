@@ -1,32 +1,28 @@
-const cards = [
-  {
-    id: 1,
-    title: 'cvPoa',
-    category: 'websites',
-    img: '/dist/assets/cvpoa-website.jpg',
-    desc:
-      'cvPoa is an online cv builder. Users choose a template, fill in their details and download',
-  },
-  {
-    id: 2,
-    title: 'Manage',
-    category: 'websites',
-    img: '/dist/assets/manage-website.jpg',
-    desc:
-      'Manage landing page is an online cv builder. Users choose a template, fill in their details and download',
-  },
-  {
-    id: 3,
-    title: '254Hope',
-    category: 'graphics',
-    img: '/dist/assets/hope-logo.jpg',
-    desc:
-      '254Hope is an online cv builder. Users choose a template, fill in their details and download',
-  },
-];
-
 const portfolioCards = document.querySelector('.portfolio-cards');
 const btnContainer = document.querySelector('.portfolio-btns');
+
+function portfolio() {
+  const url = '/src/portfolio.json';
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const cards = JSON.parse(xhr.responseText);
+      cardList(cards);
+      filterBtns(cards);
+      window.addEventListener('DOMContentLoaded', () => {
+        cardList(cards);
+        filterBtns(cards);
+      });
+    } else
+      console.log({
+        state: xhr.readyState,
+        status: xhr.status,
+        text: xhr.statusText,
+      });
+  };
+  xhr.send();
+}
 
 function cardList(cardItems) {
   let displayCards = cardItems.map((item) => {
@@ -78,7 +74,7 @@ function cardList(cardItems) {
   portfolioCards.innerHTML = displayCards;
 }
 
-function filterBtns() {
+function filterBtns(cards) {
   const categories = cards.reduce(
     (values, item) => {
       if (!values.includes(item.category)) values.push(item.category);
@@ -96,6 +92,14 @@ function filterBtns() {
   portfolioBtns.forEach((portfolioBtn) => {
     portfolioBtn.addEventListener('click', (e) => {
       const category = e.currentTarget.dataset.id;
+      // console.log(portfolioBtn);
+      // portfolioBtns.forEach((removeActive) => {
+      //   if (!removeActive === portfolioBtn)
+      //     removeActive.classList.remove('active');
+      // else portfolioBtn.classList.add('active');
+      // });
+      // portfolioBtn.classList.add('active');
+
       const cardCategory = cards.filter((cardItem) => {
         if (cardItem.category === category) {
           return cardItem;
@@ -107,9 +111,10 @@ function filterBtns() {
   });
 }
 
-const portfolio = window.addEventListener('DOMContentLoaded', () => {
-  cardList(cards);
-  filterBtns();
+const viewMore = document.querySelector('.card-btn');
+const viewBtn = viewMore.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('btn clicked');
 });
 
-export { portfolio };
+export { portfolio, viewBtn };

@@ -1,0 +1,23 @@
+[
+  {
+    "id" : 1,
+    "title" : "cvPoa",
+    "category" : "websites",
+    "img" : "/dist/assets/cvpoa-website.jpg",
+    "desc" : "cvPoa is an online cv builder. Users choose a template, fill in their details and download"
+  },
+  {
+    "id" : 2,
+    "title" : "Manage",
+    "category" : "websites",
+    "img" : "/dist/assets/manage-website.jpg",
+    "desc" : "Manage landing page is an online cv builder. Users choose a template, fill in their details and download"
+  },
+  {
+    "id" : 3,
+    "title" : "254Hope",
+    "category" : "graphics",
+    "img" : "/dist/assets/hope-logo.jpg",
+    "desc" : "254Hope is an online cv builder. Users choose a template, fill in their details and download"
+  }
+]
