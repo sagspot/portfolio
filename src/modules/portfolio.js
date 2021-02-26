@@ -1,5 +1,7 @@
-const portfolioCards = document.querySelector('.portfolio-cards');
-const btnContainer = document.querySelector('.portfolio-btns');
+const portfolioCards = document.querySelector('.main-cards');
+const modalCards = document.querySelector('.modal-cards');
+const btnContainer = document.querySelector('.main-btns');
+const btnModal = document.querySelector('.modal-btns');
 
 function portfolio() {
   const url = '/src/portfolio.json';
@@ -10,16 +12,13 @@ function portfolio() {
       const cards = JSON.parse(xhr.responseText);
       cardList(cards);
       filterBtns(cards);
-      window.addEventListener('DOMContentLoaded', () => {
-        cardList(cards);
-        filterBtns(cards);
-      });
-    } else
-      console.log({
-        state: xhr.readyState,
-        status: xhr.status,
-        text: xhr.statusText,
-      });
+    }
+    // else
+    //   console.log({
+    //     state: xhr.readyState,
+    //     status: xhr.status,
+    //     text: xhr.statusText,
+    //   });
   };
   xhr.send();
 }
@@ -34,7 +33,7 @@ function cardList(cardItems) {
               <h3>${item.title}</h3>
               <p>${item.desc} </p>
               <div class="card-btns flex ai-c">
-                <a href="#" target="_blank" class="card-btn flex ai-c">
+                <a href="${item.source}" target="_blank" class="card-btn flex ai-c sourceLink">
                   <svg
                     width="21"
                     height="21"
@@ -49,7 +48,7 @@ function cardList(cardItems) {
                   </svg>
                   Code
                 </a>
-                <a href="#" target="_blank" class="card-btn flex ai-c">
+                <a href="${item.url}" target="_blank" class="card-btn flex ai-c previewLink">
                   <svg
                     width="21"
                     height="21"
@@ -71,7 +70,43 @@ function cardList(cardItems) {
           </article>`;
   });
   displayCards = displayCards.join('');
+
   portfolioCards.innerHTML = displayCards;
+
+  // limit homepage display to 3 items
+  const displayItems = [...document.querySelectorAll('.portfolio-card')];
+  let displayItem = '';
+  for (let i = 0; i < 3; i++) {
+    displayItem += displayItems[randomNumber()].outerHTML;
+  }
+  function randomNumber() {
+    // const 
+    return Math.floor(Math.random() * displayItems.length);
+  }
+  portfolioCards.innerHTML = displayItem;
+  modalCards.innerHTML = displayCards;
+  // console.log(displayItems);
+  // console.log(dispItems.length);
+
+  // let(i = 0; i < 3;i++)
+
+  // Hide a tags without source code
+  const sourceLink = document.querySelectorAll('.sourceLink');
+  sourceLink.forEach(function (source) {
+    const noSource = source.getAttribute('href') === 'undefined';
+    noSource ? (source.style.display = 'none') : source;
+  });
+
+  // Graphic button behaviour
+  const previewLink = document.querySelectorAll('.previewLink');
+  previewLink.forEach(function (preview) {
+    const graphic = preview.getAttribute('href') === 'undefined';
+    preview.addEventListener('click', (e) => {
+      if (graphic) {
+        e.preventDefault();
+      }
+    });
+  });
 }
 
 function filterBtns(cards) {
@@ -88,18 +123,27 @@ function filterBtns(cards) {
     })
     .join('');
   btnContainer.innerHTML = categoryBtns;
+  btnModal.innerHTML = categoryBtns;
+
+  // Filtering by categories
   const portfolioBtns = btnContainer.querySelectorAll('.portfolio-btn');
   portfolioBtns.forEach((portfolioBtn) => {
     portfolioBtn.addEventListener('click', (e) => {
       const category = e.currentTarget.dataset.id;
-      // console.log(portfolioBtn);
-      // portfolioBtns.forEach((removeActive) => {
-      //   if (!removeActive === portfolioBtn)
-      //     removeActive.classList.remove('active');
-      // else portfolioBtn.classList.add('active');
-      // });
-      // portfolioBtn.classList.add('active');
+      const cardCategory = cards.filter((cardItem) => {
+        if (cardItem.category === category) {
+          return cardItem;
+        }
+      });
+      if (category === 'all') cardList(cards);
+      else cardList(cardCategory);
+    });
+  });
 
+  const modalBtns = btnModal.querySelectorAll('.portfolio-btn');
+  modalBtns.forEach((portfolioBtn) => {
+    portfolioBtn.addEventListener('click', (e) => {
+      const category = e.currentTarget.dataset.id;
       const cardCategory = cards.filter((cardItem) => {
         if (cardItem.category === category) {
           return cardItem;
@@ -112,9 +156,20 @@ function filterBtns(cards) {
 }
 
 const viewMore = document.querySelector('.card-btn');
+const modal = document.querySelector('.modal');
+// const modalBox = document.querySelector('.modal-box');
+const modelClose = document.querySelector('.modal-close');
+
 const viewBtn = viewMore.addEventListener('click', (e) => {
   e.preventDefault();
-  console.log('btn clicked');
+  modal.classList.add('open');
+  document.body.style.overflowY = 'hidden';
 });
 
-export { portfolio, viewBtn };
+function closeModal() {
+  modelClose.addEventListener('click', () => {
+    modal.classList.remove('open');
+    document.body.style.overflowY = 'auto';
+  });
+}
+export { portfolio, viewBtn, closeModal };

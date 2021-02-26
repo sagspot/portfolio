@@ -4,6 +4,7 @@
     "title" : "cvPoa",
     "category" : "websites",
     "img" : "/dist/assets/cvpoa-website.jpg",
+    "url" : "https://cvpoa.co.ke/",
     "desc" : "cvPoa is an online cv builder. Users choose a template, fill in their details and download"
   },
   {
@@ -11,6 +12,8 @@
     "title" : "Manage",
     "category" : "websites",
     "img" : "/dist/assets/manage-website.jpg",
+    "source" : "https://github.com/sagspot/manage-landing-page",
+    "url" : "https://manage-landing-page-git-master.sagspot.vercel.app/",
     "desc" : "Manage landing page is an online cv builder. Users choose a template, fill in their details and download"
   },
   {
@@ -18,6 +21,15 @@
     "title" : "254Hope",
     "category" : "graphics",
     "img" : "/dist/assets/hope-logo.jpg",
-    "desc" : "254Hope is an online cv builder. Users choose a template, fill in their details and download"
+    "desc" : "254Hope brings together young professionals from different backgrounds to agitate for better governance"
+  },
+  {
+    "id" : 4,
+    "title" : "Easybank",
+    "category" : "websites",
+    "img" : "/dist/assets/easybank.jpg",
+    "source" : "https://github.com/sagspot/easybank-landing-page",
+    "url" : "https://easybank-landing-page-git-master.sagspot.vercel.app/",
+    "desc" : "Easybank brings together young professionals from different backgrounds to agitate for better governance"
   }
 ]
