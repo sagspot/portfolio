@@ -82,25 +82,12 @@ header {
   z-index: 1000;
 }
 
-.nav-center {
-  padding: 0.75rem 0;
-}
-
 @media (min-width: 56.25rem) {
   .nav-center {
+    padding: 0.25rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-}
-
-.nav-brand {
-  padding-bottom: 1rem;
-}
-
-@media (min-width: 56.25rem) {
-  .nav-brand {
-    padding-bottom: unset;
   }
 }
 
