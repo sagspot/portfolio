@@ -1,7 +1,6 @@
 const portfolioCards = document.querySelector('.main-cards');
 const modalCards = document.querySelector('.modal-cards');
-const btnContainer = document.querySelector('.main-btns');
-const btnModal = document.querySelector('.modal-btns');
+const btnContainer = document.querySelector('.modal-btns');
 
 function portfolio() {
   const url = '/src/portfolio.json';
@@ -12,13 +11,12 @@ function portfolio() {
       const cards = JSON.parse(xhr.responseText);
       cardList(cards);
       filterBtns(cards);
-    }
-    // else
-    //   console.log({
-    //     state: xhr.readyState,
-    //     status: xhr.status,
-    //     text: xhr.statusText,
-    //   });
+    } else
+      console.log({
+        state: xhr.readyState,
+        status: xhr.status,
+        text: xhr.statusText,
+      });
   };
   xhr.send();
 }
@@ -73,22 +71,22 @@ function cardList(cardItems) {
 
   portfolioCards.innerHTML = displayCards;
 
-  // limit homepage display to 3 items
+  // limit homepage display to 3 random items
   const displayItems = [...document.querySelectorAll('.portfolio-card')];
+  const randomNumbers = [];
+  while (randomNumbers.length < 3) {
+    const arr = Math.floor(Math.random() * displayItems.length);
+    if (randomNumbers.indexOf(arr) === -1) randomNumbers.push(arr);
+  }
   let displayItem = '';
-  for (let i = 0; i < 3; i++) {
-    displayItem += displayItems[randomNumber()].outerHTML;
-  }
   function randomNumber() {
-    // const 
-    return Math.floor(Math.random() * displayItems.length);
+    randomNumbers.forEach((item) => {
+      displayItem += displayItems[item].outerHTML;
+    });
   }
+  randomNumber();
   portfolioCards.innerHTML = displayItem;
   modalCards.innerHTML = displayCards;
-  // console.log(displayItems);
-  // console.log(dispItems.length);
-
-  // let(i = 0; i < 3;i++)
 
   // Hide a tags without source code
   const sourceLink = document.querySelectorAll('.sourceLink');
@@ -123,7 +121,6 @@ function filterBtns(cards) {
     })
     .join('');
   btnContainer.innerHTML = categoryBtns;
-  btnModal.innerHTML = categoryBtns;
 
   // Filtering by categories
   const portfolioBtns = btnContainer.querySelectorAll('.portfolio-btn');
@@ -139,25 +136,10 @@ function filterBtns(cards) {
       else cardList(cardCategory);
     });
   });
-
-  const modalBtns = btnModal.querySelectorAll('.portfolio-btn');
-  modalBtns.forEach((portfolioBtn) => {
-    portfolioBtn.addEventListener('click', (e) => {
-      const category = e.currentTarget.dataset.id;
-      const cardCategory = cards.filter((cardItem) => {
-        if (cardItem.category === category) {
-          return cardItem;
-        }
-      });
-      if (category === 'all') cardList(cards);
-      else cardList(cardCategory);
-    });
-  });
 }
 
 const viewMore = document.querySelector('.card-btn');
 const modal = document.querySelector('.modal');
-// const modalBox = document.querySelector('.modal-box');
 const modelClose = document.querySelector('.modal-close');
 
 const viewBtn = viewMore.addEventListener('click', (e) => {

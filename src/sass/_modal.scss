@@ -5,7 +5,7 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background: rgba($color: $gray, $alpha: 0.8);
+  background: rgba($color: $black, $alpha: 0.9);
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -17,8 +17,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     margin: auto;
     border-radius: 0.5rem;
     overflow-y: auto;
@@ -45,6 +45,9 @@
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+  }
+  .portfolio-card {
+    transform: scale(0.9);
   }
   .portfolio-btns {
     margin-top: 2rem;

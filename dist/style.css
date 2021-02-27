@@ -405,7 +405,7 @@ header {
   transition: transform 0.3s ease-in-out;
   background: #4f4f4f;
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -455,7 +455,7 @@ header {
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background: rgba(79, 79, 79, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -469,8 +469,8 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   margin: auto;
   border-radius: 0.5rem;
   overflow-y: auto;
@@ -498,6 +498,10 @@ header {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+}
+
+.modal .portfolio-card {
+  transform: scale(0.9);
 }
 
 .modal .portfolio-btns {
