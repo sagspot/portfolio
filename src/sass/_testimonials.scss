@@ -10,6 +10,9 @@
   &-wrapper {
     border-radius: rem(8);
     background: $mid-gray;
+    @include tablet-landscape-up {
+      min-height: rem(280);
+    }
   }
   &-content {
     width: 80%;

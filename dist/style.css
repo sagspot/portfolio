@@ -52,7 +52,7 @@ ul {
 
 header {
   min-height: 100vh;
-  background: url("./assets/small.jpg"), #4f4f4f;
+  background: url("./assets/forest.jpg"), #4f4f4f;
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -519,6 +519,12 @@ header {
 .testimonial-wrapper {
   border-radius: 0.5rem;
   background: #f2f2f2;
+}
+
+@media (min-width: 56.25rem) {
+  .testimonial-wrapper {
+    min-height: 17.5rem;
+  }
 }
 
 .testimonial-content {
