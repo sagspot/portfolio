@@ -11,12 +11,13 @@ function portfolio() {
       const cards = JSON.parse(xhr.responseText);
       cardList(cards);
       filterBtns(cards);
-    } else
-      console.log({
-        state: xhr.readyState,
-        status: xhr.status,
-        text: xhr.statusText,
-      });
+    }
+    // else
+    //   console.log({
+    //     state: xhr.readyState,
+    //     status: xhr.status,
+    //     text: xhr.statusText,
+    //   });
   };
   xhr.send();
 }
@@ -99,11 +100,7 @@ function cardList(cardItems) {
   const previewLink = document.querySelectorAll('.previewLink');
   previewLink.forEach(function (preview) {
     const graphic = preview.getAttribute('href') === 'undefined';
-    preview.addEventListener('click', (e) => {
-      if (graphic) {
-        e.preventDefault();
-      }
-    });
+    graphic ? (preview.style.display = 'none') : preview;
   });
 }
 
