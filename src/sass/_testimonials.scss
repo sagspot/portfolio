@@ -9,7 +9,7 @@
   }
   &-wrapper {
     border-radius: rem(8);
-    background: $mid-gray;
+    background: lighten($light-orange, 15%);
   }
   &-content {
     width: 80%;
@@ -24,7 +24,7 @@
       transform: translateX(-50%);
       width: 80px;
       border-radius: 50%;
-      border: rem(2) solid $mid-gray;
+      border: rem(2) solid lighten($light-orange, 15%);
     }
     h3 {
       margin: 4rem 0 2rem;

@@ -17,7 +17,11 @@
       margin-bottom: 2rem;
     }
     p {
+      line-height: 1.5;
       margin-bottom: 2rem;
+      @include tablet-landscape-up {
+        line-height: 2;
+      }
     }
   }
   &-software {
@@ -36,11 +40,12 @@
           outline: none;
           cursor: pointer;
           path {
+            fill: $orange;
             transition: all 0.2s ease-in-out;
           }
           &:hover {
             path {
-              fill: lighten($gray, 10%);
+              fill: $light-orange;
             }
           }
         }

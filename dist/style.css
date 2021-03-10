@@ -13,11 +13,16 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  color: #1d415d;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h2 {
+  color: #234f70;
 }
 
 .logo {
@@ -31,12 +36,12 @@ a {
 }
 
 .container {
-  margin: 2rem;
+  padding: 2rem;
 }
 
 @media (min-width: 56.25rem) {
   .container {
-    margin: 2rem 4rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -62,7 +67,7 @@ ul {
 
 header {
   min-height: 100vh;
-  background: url("./assets/forest.jpg"), #4f4f4f;
+  background: url("./assets/forest.jpg"), #234f70;
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -71,7 +76,7 @@ header {
 .nav {
   padding: 1rem 1.5rem;
   background: white;
-  color: #4f4f4f;
+  color: #234f70;
 }
 
 .nav .logo-white {
@@ -96,9 +101,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  color: #4f4f4f;
+  color: #234f70;
   background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(35, 79, 112, 0.1);
   z-index: 1000;
 }
 
@@ -139,7 +144,7 @@ header {
   width: 2rem;
   height: 0.1875rem;
   transition: all 0.3s ease-in-out;
-  background: #4f4f4f;
+  background: #f25f3a;
 }
 
 .nav-toggle span {
@@ -261,7 +266,7 @@ header {
 }
 
 .hero a:hover {
-  color: #4f4f4f;
+  color: #f25f3a;
   background: white;
 }
 
@@ -290,7 +295,14 @@ header {
 }
 
 .about-details p {
+  line-height: 1.5;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 56.25rem) {
+  .about-details p {
+    line-height: 2;
+  }
 }
 
 @media (min-width: 56.25rem) {
@@ -317,11 +329,12 @@ header {
 }
 
 .about-software .items li svg path {
+  fill: #f25f3a;
   transition: all 0.2s ease-in-out;
 }
 
 .about-software .items li svg:hover path {
-  fill: dimgray;
+  fill: #f9b1a4;
 }
 
 .portfolio {
@@ -356,7 +369,7 @@ header {
   width: 100%;
   height: 2px;
   bottom: -6px;
-  background: #4f4f4f;
+  background: #f25f3a;
   transform: scale(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -383,15 +396,15 @@ header {
   margin: 4rem auto 0;
   background: white;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 7px 1px rgba(79, 79, 79, 0.2);
+  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.2);
 }
 
 .portfolio-card:hover {
-  box-shadow: 2px 2px 7px 1px rgba(79, 79, 79, 0.2), -2px -2px 7px 1px rgba(79, 79, 79, 0.2);
+  box-shadow: 2px 2px 7px 1px rgba(35, 79, 112, 0.2), -2px -2px 7px 1px rgba(35, 79, 112, 0.2);
 }
 
 .portfolio-card:hover .card-preview {
-  box-shadow: 2px 2px 7px 1px rgba(79, 79, 79, 0.2), -2px -2px 7px 1px rgba(79, 79, 79, 0.2);
+  box-shadow: 2px 2px 7px 1px rgba(35, 79, 112, 0.2), -2px -2px 7px 1px rgba(35, 79, 112, 0.2);
 }
 
 .portfolio-card:hover .card-preview .preview {
@@ -409,16 +422,16 @@ header {
   border-radius: 8px;
   background: white;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 7px 1px rgba(79, 79, 79, 0.2);
+  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.2);
 }
 
 .portfolio-card .card-preview .preview {
   width: 90%;
   height: 90%;
-  box-shadow: 0 0 7px 1px rgba(79, 79, 79, 0.5);
+  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.5);
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
-  background: #4f4f4f;
+  background: #234f70;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -446,8 +459,8 @@ header {
   border-radius: 8px;
   margin-bottom: 1.5rem;
   transition: background 0.2s ease-in-out;
-  color: #fafafa;
-  background: #4f4f4f;
+  color: white;
+  background: #f25f3a;
 }
 
 .card-btn svg {
@@ -455,7 +468,7 @@ header {
 }
 
 .card-btn:hover {
-  background: #828282;
+  background: #f9b1a4;
 }
 
 .more-btn {
@@ -470,7 +483,7 @@ header {
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(35, 79, 112, 0.9);
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -489,7 +502,7 @@ header {
   margin: auto;
   border-radius: 0.5rem;
   overflow-y: auto;
-  background: rgba(250, 250, 250, 0.9);
+  background: #e8f1f8;
 }
 
 .modal-close {
@@ -502,7 +515,7 @@ header {
 }
 
 .modal-close svg {
-  fill: #4f4f4f;
+  fill: #f25f3a;
 }
 
 .modal-close:hover svg {
@@ -546,7 +559,7 @@ header {
 
 .testimonial-wrapper {
   border-radius: 0.5rem;
-  background: #f2f2f2;
+  background: #feefec;
 }
 
 .testimonial-content {
@@ -564,7 +577,7 @@ header {
   transform: translateX(-50%);
   width: 80px;
   border-radius: 50%;
-  border: 0.125rem solid #f2f2f2;
+  border: 0.125rem solid #feefec;
 }
 
 .testimonial-content h3 {
@@ -602,7 +615,7 @@ header {
   min-width: 300px;
   padding: 0.25rem 1rem;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 0 7px 1px rgba(79, 79, 79, 0.25);
+  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.25);
 }
 
 .contact-items a svg {
@@ -610,21 +623,22 @@ header {
 }
 
 .contact-items a svg path {
+  fill: #f25f3a;
   transition: fill 0.2s ease-in-out;
 }
 
 .contact-items a:hover {
-  color: #5c5c5c;
-  box-shadow: 0 2px 7px 4px rgba(79, 79, 79, 0.25);
+  color: #2a5d84;
+  box-shadow: 0 2px 7px 4px rgba(35, 79, 112, 0.25);
 }
 
 .contact-items a:hover path {
-  fill: dimgray;
+  fill: #f9b1a4;
 }
 
 .footer {
   color: white;
-  background: #4f4f4f;
+  background: #234f70;
 }
 
 .footer-wrapper {
@@ -643,7 +657,6 @@ header {
 }
 
 .footer .logo {
-  display: block;
   margin-bottom: 1rem;
 }
 
@@ -670,12 +683,16 @@ header {
 
 .footer .social-links svg {
   transform: scale(0.6);
-  transition: transform 0.2s ease-in-out;
   outline: none;
 }
 
-.footer .social-links svg:hover {
-  transform: scale(0.7);
+.footer .social-links svg path {
+  fill: #aecde5;
+  transition: fill 0.2s ease-in-out;
+}
+
+.footer .social-links svg:hover path {
+  fill: #609ecd;
 }
 
 .footer .social-links svg:active {
@@ -684,6 +701,6 @@ header {
 
 .footer p {
   font-size: 0.8125rem;
-  color: #b5b5b5;
+  color: #aecde5;
 }
 /*# sourceMappingURL=style.css.map */

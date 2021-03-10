@@ -10,10 +10,14 @@ html {
 }
 body {
   font-family: 'Lato', sans-serif;
+  color: darken($blue, 5%);
 }
 a {
   text-decoration: none;
   color: inherit;
+}
+h2 {
+  color: $blue;
 }
 .logo {
   width: 120px;
@@ -22,9 +26,9 @@ a {
   }
 }
 .container {
-  margin: 2rem;
+  padding: 2rem;
   @include tablet-landscape-up {
-    margin: 2rem 4rem;
+    padding: 2rem 4rem;
   }
 }
 .flex {

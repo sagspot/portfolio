@@ -1,6 +1,6 @@
 .footer {
   color: $white;
-  background: $gray;
+  background: $blue;
   &-wrapper {
     text-align: center;
     padding: 2rem;
@@ -13,7 +13,6 @@
     }
   }
   .logo {
-    display: block;
     margin-bottom: 1rem;
     @include tablet-landscape-up {
       margin-bottom: unset;
@@ -30,11 +29,16 @@
     }
     svg {
       transform: scale(0.6);
-      transition: transform 0.2s ease-in-out;
       outline: none;
+      path {
+        fill: lighten($blue, 50%);
+        transition: fill 0.2s ease-in-out;
+      }
 
       &:hover {
-        transform: scale(0.7);
+        path {
+          fill: lighten($blue, 30%);
+        }
       }
       &:active {
         transform: scale(0.6);
@@ -43,6 +47,6 @@
   }
   p {
     font-size: rem(13);
-    color: lighten($gray, 40%);
+    color: lighten($blue, 50%);
   }
 }

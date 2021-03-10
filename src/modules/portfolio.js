@@ -11,13 +11,12 @@ function portfolio() {
       const cards = JSON.parse(xhr.responseText);
       cardList(cards);
       filterBtns(cards);
-    }
-    // else
-    //   console.log({
-    //     state: xhr.readyState,
-    //     status: xhr.status,
-    //     text: xhr.statusText,
-    //   });
+    } else
+      console.log({
+        state: xhr.readyState,
+        status: xhr.status,
+        text: xhr.statusText,
+      });
   };
   xhr.send();
 }

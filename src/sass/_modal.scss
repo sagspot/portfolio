@@ -5,7 +5,7 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background: rgba($color: $black, $alpha: 0.9);
+  background: rgba($color: $blue, $alpha: 0.9);
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -22,7 +22,7 @@
     margin: auto;
     border-radius: 0.5rem;
     overflow-y: auto;
-    background: rgba($color: $light-gray, $alpha: 0.9);
+    background: lighten($blue, 65%);
   }
   &-close {
     position: absolute;
@@ -32,7 +32,7 @@
     right: 2rem;
     cursor: pointer;
     svg {
-      fill: $gray;
+      fill: $orange;
     }
 
     &:hover {

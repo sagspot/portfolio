@@ -24,7 +24,7 @@
       width: 100%;
       height: 2px;
       bottom: -6px;
-      background: $gray;
+      background: $orange;
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
@@ -49,13 +49,13 @@
     margin: 4rem auto 0;
     background: $white;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 7px 1px rgba($color: $gray, $alpha: 0.2);
+    box-shadow: 0 0 7px 1px rgba($color: $blue, $alpha: 0.2);
     &:hover {
-      box-shadow: 2px 2px 7px 1px rgba($color: $gray, $alpha: 0.2),
-        -2px -2px 7px 1px rgba($color: $gray, $alpha: 0.2);
+      box-shadow: 2px 2px 7px 1px rgba($color: $blue, $alpha: 0.2),
+        -2px -2px 7px 1px rgba($color: $blue, $alpha: 0.2);
       .card-preview {
-        box-shadow: 2px 2px 7px 1px rgba($color: $gray, $alpha: 0.2),
-          -2px -2px 7px 1px rgba($color: $gray, $alpha: 0.2);
+        box-shadow: 2px 2px 7px 1px rgba($color: $blue, $alpha: 0.2),
+          -2px -2px 7px 1px rgba($color: $blue, $alpha: 0.2);
         .preview {
           transform: scale(1.1);
         }
@@ -73,14 +73,14 @@
         border-radius: 8px;
         background: $white;
         transition: all 0.3s ease-in-out;
-        box-shadow: 0 0 7px 1px rgba($color: $gray, $alpha: 0.2);
+        box-shadow: 0 0 7px 1px rgba($color: $blue, $alpha: 0.2);
         .preview {
           width: 90%;
           height: 90%;
-          box-shadow: 0 0 7px 1px rgba($color: $gray, $alpha: 0.5);
+          box-shadow: 0 0 7px 1px rgba($color: $blue, $alpha: 0.5);
           border-radius: 8px;
           transition: transform 0.3s ease-in-out;
-          background: $gray;
+          background: $blue;
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -107,13 +107,13 @@
   border-radius: 8px;
   margin-bottom: 1.5rem;
   transition: background 0.2s ease-in-out;
-  color: $light-gray;
-  background: $gray;
+  color: $white;
+  background: $orange;
   svg {
     margin-right: 8px;
   }
   &:hover {
-    background: lighten($gray, 20%);
+    background: $light-orange;
   }
 }
 .more-btn {

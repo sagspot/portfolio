@@ -17,19 +17,20 @@
       min-width: 300px;
       padding: 0.25rem 1rem;
       transition: all 0.2s ease-in-out;
-      box-shadow: 0 0 7px 1px rgba($color: $gray, $alpha: 0.25);
+      box-shadow: 0 0 7px 1px rgba($color: $blue, $alpha: 0.25);
       svg {
         transform: scale(0.6);
         path {
+          fill: $orange;
           transition: fill 0.2s ease-in-out;
         }
       }
       &:hover {
-        color: lighten($gray, 5%);
+        color: lighten($blue, 5%);
         path {
-          fill: lighten($gray, 10%);
+          fill: $light-orange;
         }
-        box-shadow: 0 2px 7px 4px rgba($color: $gray, $alpha: 0.25);
+        box-shadow: 0 2px 7px 4px rgba($color: $blue, $alpha: 0.25);
       }
     }
   }
