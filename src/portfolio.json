@@ -10,6 +10,13 @@
   },
   {
     "id" : 2,
+    "title" : "Sagspot",
+    "category" : "logos",
+    "img" : "/dist/assets/sagspot.jpg",
+    "desc" : "Sagspot logo was designed with adobe illustrator"
+  },
+  {
+    "id" : 3,
     "title" : "cvPoa",
     "category" : "websites",
     "img" : "/dist/assets/cvpoa-website.jpg",
@@ -17,7 +24,24 @@
     "desc" : "Online cv builder. Built with react & django with a partner."
   },
   {
-    "id" : 3,
+    "id" : 4,
+    "title" : "Nia Foundation",
+    "category" : "logos",
+    "img" : "/dist/assets/nia.jpg",
+    "desc" : "Nia Foundation logo was designed with adobe illustrator"
+  },
+  {
+    "id" : 5,
+    "title" : "Easybank",
+    "category" : "websites",
+    "img" : "/dist/assets/easybank.jpg",
+    "source" : "https://github.com/sagspot/easybank-landing-page",
+    "url" : "https://easybank-landing-page-git-master.sagspot.vercel.app/",
+    "desc" : "A challenge from the Frontend Mentor website. Built with HTML, SCSS & Javascript."
+  },
+  
+  {
+    "id" : 6,
     "title" : "Manage",
     "category" : "websites",
     "img" : "/dist/assets/manage-website.jpg",
@@ -26,16 +50,22 @@
     "desc" : "A challenge from the Frontend Mentor website. Built with HTML, SCSS & Javascript."
   }, 
   {
-    "id" : 4,
-    "title" : "Easybank",
-    "category" : "websites",
-    "img" : "/dist/assets/easybank.jpg",
-    "source" : "https://github.com/sagspot/easybank-landing-page",
-    "url" : "https://easybank-landing-page-git-master.sagspot.vercel.app/",
-    "desc" : "A challenge from the Frontend Mentor website. Built with HTML, SCSS & Javascript."
+    "id" : 7,
+    "title" : "254Hope",
+    "category" : "logos",
+    "img" : "/dist/assets/hope-logo.jpg",
+    "desc" : "254Hope logo was designed with adobe illustrator"
+  },
+  
+  {
+    "id" : 8,
+    "title" : "Bill Karueru",
+    "category" : "logos",
+    "img" : "/dist/assets/bill-karueru.jpg",
+    "desc" : "Bill Karueru logo was designed with adobe photoshop"
   },
   {
-    "id" : 5,
+    "id" : 9,
     "title" : "Chat App Illustration",
     "category" : "websites",
     "img" : "/dist/assets/chat-app-illustration.jpg",
@@ -44,37 +74,9 @@
     "desc" : "A challenge from the Frontend Mentor website. Built with HTML & SCSS."
   },
   {
-    "id" : 6,
-    "title" : "Sagspot",
-    "category" : "graphics",
-    "img" : "/dist/assets/sagspot.jpg",
-    "desc" : "Sagspot logo was designed with adobe illustrator"
-  },
-  {
-    "id" : 7,
-    "title" : "254Hope",
-    "category" : "graphics",
-    "img" : "/dist/assets/hope-logo.jpg",
-    "desc" : "254Hope logo was designed with adobe illustrator"
-  },
-  {
-    "id" : 8,
-    "title" : "Nia Foundation",
-    "category" : "graphics",
-    "img" : "/dist/assets/nia.jpg",
-    "desc" : "Nia Foundation logo was designed with adobe illustrator"
-  },
-  {
-    "id" : 9,
-    "title" : "Bill Karueru",
-    "category" : "graphics",
-    "img" : "/dist/assets/bill-karueru.jpg",
-    "desc" : "Bill Karueru logo was designed with adobe photoshop"
-  },
-  {
     "id" : 10,
     "title" : "Afya Mtaani",
-    "category" : "graphics",
+    "category" : "logos",
     "img" : "/dist/assets/afya-mtaani.jpg",
     "desc" : "Afya Mtaani logo was designed with adobe illustrator"
   }

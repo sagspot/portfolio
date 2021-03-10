@@ -10,9 +10,20 @@ header {
   padding: 1rem 1.5rem;
   background: $white;
   color: $gray;
+  .logo-white {
+    display: none;
+  }
   @include tablet-landscape-up {
     color: $white;
     background: transparent;
+    .logo {
+      &-white {
+        display: block;
+      }
+      &-colored {
+        display: none;
+      }
+    }
   }
   &-fixed {
     position: fixed;
@@ -23,6 +34,14 @@ header {
     background: $white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    .logo {
+      &-white {
+        display: none;
+      }
+      &-colored {
+        display: block;
+      }
+    }
   }
   &-center {
     @include tablet-landscape-up {

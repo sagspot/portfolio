@@ -20,6 +20,16 @@ a {
   color: inherit;
 }
 
+.logo {
+  width: 120px;
+}
+
+@media (min-width: 56.25rem) {
+  .logo {
+    width: 150px;
+  }
+}
+
 .container {
   margin: 2rem;
 }
@@ -64,10 +74,20 @@ header {
   color: #4f4f4f;
 }
 
+.nav .logo-white {
+  display: none;
+}
+
 @media (min-width: 56.25rem) {
   .nav {
     color: white;
     background: transparent;
+  }
+  .nav .logo-white {
+    display: block;
+  }
+  .nav .logo-colored {
+    display: none;
   }
 }
 
@@ -80,6 +100,14 @@ header {
   background: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+.nav-fixed .logo-white {
+  display: none;
+}
+
+.nav-fixed .logo-colored {
+  display: block;
 }
 
 @media (min-width: 56.25rem) {
