@@ -53,8 +53,29 @@ h2 {
   justify-content: space-between;
 }
 
+.jc-c {
+  justify-content: center;
+}
+
 .ai-c {
   align-items: center;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s ease-in-out;
+  color: white;
+  background: #f25f3a;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn:hover {
+  background: #f9b1a4;
 }
 
 ul {
@@ -197,15 +218,16 @@ header {
   .nav-links .links a {
     padding: unset;
   }
-}
-
-.nav-links .links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  height: 10px;
-  width: 100%;
-  color: white;
+  .nav-links .links a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.1875rem;
+    top: 1.875rem;
+    background: #f9b1a4;
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
 .nav-links .links a:hover {
@@ -215,6 +237,9 @@ header {
 @media (min-width: 56.25rem) {
   .nav-links .links a:hover {
     transform: unset;
+  }
+  .nav-links .links a:hover::after {
+    transform: scale(1);
   }
 }
 
@@ -303,6 +328,16 @@ header {
   .about-details p {
     line-height: 2;
   }
+}
+
+.about-details div {
+  margin-bottom: 2rem;
+}
+
+.about-details div a {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  word-spacing: 1.5px;
 }
 
 @media (min-width: 56.25rem) {
@@ -452,23 +487,6 @@ header {
 
 .portfolio-card .card-btns {
   justify-content: space-around;
-}
-
-.card-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  transition: background 0.2s ease-in-out;
-  color: white;
-  background: #f25f3a;
-}
-
-.card-btn svg {
-  margin-right: 8px;
-}
-
-.card-btn:hover {
-  background: #f9b1a4;
 }
 
 .more-btn {

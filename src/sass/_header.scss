@@ -49,6 +49,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      // outline: 1px solid red;
     }
   }
   &-toggle {
@@ -106,18 +107,24 @@ header {
         position: relative;
         @include tablet-landscape-up {
           padding: unset;
-        }
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          height: 10px;
-          width: 100%;
-          color: $white;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: rem(3);
+            top: rem(30);
+            background: $light-orange;
+            // transform: scale(0);
+            transition: transform 0.3s ease-in-out;
+          }
         }
         &:hover {
           transform: translateX(rem(8));
           @include tablet-landscape-up {
+            &::after {
+              transform: scale(1);
+            }
             transform: unset;
           }
         }

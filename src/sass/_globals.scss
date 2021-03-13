@@ -37,8 +37,25 @@ h2 {
 .jc-sb {
   justify-content: space-between;
 }
+.jc-c {
+  justify-content: center;
+}
 .ai-c {
   align-items: center;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s ease-in-out;
+  color: $white;
+  background: $orange;
+  svg {
+    margin-right: 8px;
+  }
+  &:hover {
+    background: $light-orange;
+  }
 }
 ul {
   list-style: none;

@@ -31,7 +31,7 @@ function cardList(cardItems) {
               <h3>${item.title}</h3>
               <p>${item.desc} </p>
               <div class="card-btns flex ai-c">
-                <a href="${item.source}" target="_blank" class="card-btn flex ai-c sourceLink">
+                <a href="${item.source}" target="_blank" class="card-btn btn flex ai-c sourceLink">
                   <svg
                     width="21"
                     height="21"
@@ -46,7 +46,7 @@ function cardList(cardItems) {
                   </svg>
                   Code
                 </a>
-                <a href="${item.url}" target="_blank" class="card-btn flex ai-c previewLink">
+                <a href="${item.url}" target="_blank" class="card-btn btn flex ai-c previewLink">
                   <svg
                     width="21"
                     height="21"
