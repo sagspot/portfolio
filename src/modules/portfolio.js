@@ -2,24 +2,22 @@ const portfolioCards = document.querySelector('.main-cards');
 const modalCards = document.querySelector('.modal-cards');
 const btnContainer = document.querySelector('.modal-btns');
 
-function portfolio() {
-  const url = '/src/portfolio.json';
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      const cards = JSON.parse(xhr.responseText);
-      cardList(cards);
-      filterBtns(cards);
-    } else
-      console.log({
-        state: xhr.readyState,
-        status: xhr.status,
-        text: xhr.statusText,
-      });
-  };
-  xhr.send();
-}
+const url = '/src/portfolio.json';
+const xhr = new XMLHttpRequest();
+xhr.open('GET', url);
+const portfolio = (xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    const cards = JSON.parse(xhr.responseText);
+    cardList(cards);
+    filterBtns(cards);
+  } else
+    console.log({
+      state: xhr.readyState,
+      status: xhr.status,
+      text: xhr.statusText,
+    });
+});
+xhr.send();
 
 function cardList(cardItems) {
   let displayCards = cardItems.map((item) => {
@@ -144,10 +142,9 @@ const viewBtn = viewMore.addEventListener('click', (e) => {
   document.body.style.overflowY = 'hidden';
 });
 
-function closeModal() {
-  modelClose.addEventListener('click', () => {
-    modal.classList.remove('open');
-    document.body.style.overflowY = 'auto';
-  });
-}
+const closeModal = modelClose.addEventListener('click', () => {
+  modal.classList.remove('open');
+  document.body.style.overflowY = 'auto';
+});
+
 export { portfolio, viewBtn, closeModal };

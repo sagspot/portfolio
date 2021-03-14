@@ -1,33 +1,37 @@
 .testimonial {
   margin-bottom: 6rem;
   h2 {
-    position: relative;
     margin-top: 2rem;
     margin-bottom: 6rem;
     text-align: center;
-    z-index: 100;
   }
   &-wrapper {
-    border-radius: rem(8);
-    background: lighten($light-orange, 15%);
-  }
-  &-content {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    position: relative;
+    cursor: grab;
     img {
-      position: absolute;
-      top: -100px;
-      left: 50%;
-      transform: translateX(-50%);
+      position: relative;
+      display: block;
       width: 80px;
       border-radius: 50%;
+      margin: 0 auto -3rem;
       border: rem(2) solid lighten($light-orange, 15%);
+      z-index: 10;
+    }
+  }
+  &-content {
+    text-align: center;
+    position: relative;
+    padding: 1rem 0;
+    border-radius: rem(8);
+    background: lighten($light-orange, 15%);
+    > * {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+
     }
     h3 {
-      margin: 4rem 0 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
     }
     p {
       margin-bottom: 2rem;

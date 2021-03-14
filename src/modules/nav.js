@@ -21,27 +21,25 @@ const navHead = window.addEventListener('scroll', () => {
 
 const scrollLink = document.querySelectorAll('.scroll-link');
 
-function smoothScroll() {
-  scrollLink.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
+const smoothScroll = scrollLink.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
 
-      const id = e.currentTarget.getAttribute('href').slice(1);
-      const element = document.getElementById(id);
-      const fixedNav = navHeader.classList.contains('nav-fixed');
-      const navHeight = navHeader.getBoundingClientRect().height;
-      const navLinkHeight = navLinks.getBoundingClientRect().height;
+    const id = e.currentTarget.getAttribute('href').slice(1);
+    const element = document.getElementById(id);
+    const fixedNav = navHeader.classList.contains('nav-fixed');
+    const navHeight = navHeader.getBoundingClientRect().height;
+    const navLinkHeight = navLinks.getBoundingClientRect().height;
 
-      let position = element.offsetTop - navHeight;
+    let position = element.offsetTop - navHeight;
 
-      if (!fixedNav) position = position - navHeight;
-      if (navHeight > 78) position = position + navLinkHeight;
+    if (!fixedNav) position = position - navHeight;
+    if (navHeight > 78) position = position + navLinkHeight;
 
-      window.scrollTo({ left: 0, top: position });
-      navLinks.style.height = 0;
-      nav.classList.remove('show-links');
-    });
+    window.scrollTo({ left: 0, top: position });
+    navLinks.style.height = 0;
+    nav.classList.remove('show-links');
   });
-}
+});
 
 export { navHead, navMenu, smoothScroll };
