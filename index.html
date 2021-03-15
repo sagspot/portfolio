@@ -31,20 +31,22 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="/dist/style.css" />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4SVWPFNBDJ"
+      src="https://www.googletagmanager.com/gtag/js?id=UA-192084339-1"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'G-4SVWPFNBDJ');
+      gtag("config", "UA-192084339-1");
     </script>
+
     <!-- Start of Woopra Code -->
     <script>
       (function () {
@@ -54,16 +56,16 @@
           n = window,
           o = document,
           a = arguments,
-          s = 'script',
+          s = "script",
           r = [
-            'config',
-            'track',
-            'identify',
-            'visit',
-            'push',
-            'call',
-            'trackForm',
-            'trackClick',
+            "config",
+            "track",
+            "identify",
+            "visit",
+            "push",
+            "call",
+            "trackForm",
+            "trackClick",
           ],
           c = function () {
             var t,
@@ -84,13 +86,13 @@
           n._w[a[t]] = n[a[t]] = n[a[t]] || new c();
         (i = o.createElement(s)),
           (i.async = 1),
-          (i.src = '//static.woopra.com/js/w.js'),
+          (i.src = "//static.woopra.com/js/w.js"),
           (e = o.getElementsByTagName(s)[0]),
           e.parentNode.insertBefore(i, e);
-      })('woopra');
+      })("woopra");
 
       woopra.config({
-        domain: 'sagspot.netlify.app',
+        domain: "sagspot.netlify.app",
       });
       woopra.track();
     </script>
@@ -168,6 +170,7 @@
               href="/dist/assets/oliver-resume.pdf"
               download="Oliver Sagala Resume"
               class="cv btn flex ai-c"
+              id="cv"
             >
               <svg
                 width="16"
@@ -339,7 +342,7 @@
         <div class="portfolio-btns main-btns"></div>
         <div class="portfolio-cards main-cards"></div>
 
-        <div class="more-btn flex">
+        <div class="more-btn flex" id="view-more">
           <a href="#" class="card-btn btn flex ai-c">
             <svg
               width="22"
