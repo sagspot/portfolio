@@ -24,20 +24,36 @@
     overflow-y: auto;
     background: lighten($blue, 65%);
   }
-  &-close {
-    position: absolute;
-    width: 2.5rem;
-    height: 2.5rem;
-    top: 1rem;
-    right: 2rem;
+  &-btn{
+    position: fixed;
     cursor: pointer;
+    z-index: 1;
+    width: 2.5rem;
     svg {
       fill: $orange;
     }
-
+    
+  }
+  &-close {
+    right: 3.25rem;
+    top: 2rem;
+    
     &:hover {
       svg {
         animation: spin 400ms cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+    } 
+  }
+  &-top {
+    position: fixed;
+    right: 2.75rem;
+    bottom: 4rem;
+    svg {
+      opacity: .4;
+    }
+    &:hover {
+      svg {
+        animation: bounce 2s ease-in-out infinite;
       }
     }
   }
@@ -60,5 +76,19 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+    opacity: .4;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: .4;
   }
 }

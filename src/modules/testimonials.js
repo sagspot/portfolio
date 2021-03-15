@@ -54,7 +54,6 @@ function testimonial(items) {
             </div>`;
   });
   testimonialItems = testimonialItems.join('');
-  console.log(testimonialItems);
   swiperWrapper.innerHTML = testimonialItems;
 }
 
