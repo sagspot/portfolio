@@ -1,10 +1,10 @@
-const portfolioCards = document.querySelector('.main-cards');
-const modalCards = document.querySelector('.modal-cards');
-const btnContainer = document.querySelector('.modal-btns');
+const portfolioCards = document.querySelector(".main-cards");
+const modalCards = document.querySelector(".modal-cards");
+const btnContainer = document.querySelector(".modal-btns");
 
-const url = '/src/portfolio.json';
+const url = "/src/portfolio.json";
 const xhr = new XMLHttpRequest();
-xhr.open('GET', url);
+xhr.open("GET", url);
 const portfolio = (xhr.onreadystatechange = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
     const cards = JSON.parse(xhr.responseText);
@@ -65,18 +65,18 @@ function cardList(cardItems) {
             </div>
           </article>`;
   });
-  displayCards = displayCards.join('');
+  displayCards = displayCards.join("");
 
   portfolioCards.innerHTML = displayCards;
 
   // limit homepage display to 3 random items
-  const displayItems = [...document.querySelectorAll('.portfolio-card')];
+  const displayItems = [...document.querySelectorAll(".portfolio-card")];
   const randomNumbers = [];
   while (randomNumbers.length < 3) {
     const arr = Math.floor(Math.random() * displayItems.length);
     if (randomNumbers.indexOf(arr) === -1) randomNumbers.push(arr);
   }
-  let displayItem = '';
+  let displayItem = "";
   function randomNumber() {
     randomNumbers.forEach((item) => {
       displayItem += displayItems[item].outerHTML;
@@ -87,17 +87,17 @@ function cardList(cardItems) {
   modalCards.innerHTML = displayCards;
 
   // Hide a tags without source code
-  const sourceLink = document.querySelectorAll('.sourceLink');
+  const sourceLink = document.querySelectorAll(".sourceLink");
   sourceLink.forEach(function (source) {
-    const noSource = source.getAttribute('href') === 'undefined';
-    noSource ? (source.style.display = 'none') : source;
+    const noSource = source.getAttribute("href") === "undefined";
+    noSource ? (source.style.display = "none") : source;
   });
 
-  // Graphic button behaviour
-  const previewLink = document.querySelectorAll('.previewLink');
+  // Graphic buttons behaviour
+  const previewLink = document.querySelectorAll(".previewLink");
   previewLink.forEach(function (preview) {
-    const graphic = preview.getAttribute('href') === 'undefined';
-    graphic ? (preview.style.display = 'none') : preview;
+    const graphic = preview.getAttribute("href") === "undefined";
+    graphic ? (preview.style.display = "none") : preview;
   });
 }
 
@@ -107,44 +107,51 @@ function filterBtns(cards) {
       if (!values.includes(item.category)) values.push(item.category);
       return values;
     },
-    ['all']
+    ["all"]
   );
   const categoryBtns = categories
     .map((category) => {
       return `<div class="portfolio-btn" data-id=${category}>${category}</div>`;
     })
-    .join('');
+    .join("");
   btnContainer.innerHTML = categoryBtns;
 
   // Filtering by categories
-  const portfolioBtns = btnContainer.querySelectorAll('.portfolio-btn');
+  const portfolioBtns = btnContainer.querySelectorAll(".portfolio-btn");
   portfolioBtns.forEach((portfolioBtn) => {
-    portfolioBtn.addEventListener('click', (e) => {
+    if (portfolioBtn.dataset.id === "all") portfolioBtn.classList.add("active"); //active on load
+    portfolioBtn.addEventListener("click", (e) => {
+      // active class
+      portfolioBtns.forEach((activeBtn) =>
+        activeBtn.classList.remove("active")
+      );
+      e.target.classList.add("active");
+      // filtered cards
       const category = e.currentTarget.dataset.id;
       const cardCategory = cards.filter((cardItem) => {
         if (cardItem.category === category) {
           return cardItem;
         }
       });
-      if (category === 'all') cardList(cards);
+      if (category === "all") cardList(cards);
       else cardList(cardCategory);
     });
   });
 }
 
-const viewMore = document.querySelector('.card-btn');
-const modal = document.querySelector('.modal');
-const modelClose = document.querySelector('.modal-close');
+const viewMore = document.querySelector(".card-btn");
+const modal = document.querySelector(".modal");
+const modelClose = document.querySelector(".modal-close");
 
-const viewBtn = viewMore.addEventListener('click', (e) => {
+const viewBtn = viewMore.addEventListener("click", (e) => {
   e.preventDefault();
-  modal.classList.add('open');
-  document.body.style.overflowY = 'hidden';
+  modal.classList.add("open");
+  document.body.style.overflowY = "hidden";
 });
 
-const closeModal = modelClose.addEventListener('click', () => {
-  modal.classList.remove('open');
-  document.body.style.overflowY = 'auto';
+const closeModal = modelClose.addEventListener("click", () => {
+  modal.classList.remove("open");
+  document.body.style.overflowY = "auto";
 });
 
 export { portfolio, viewBtn, closeModal };
