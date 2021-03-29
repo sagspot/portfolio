@@ -1,6 +1,7 @@
+@use '../abstracts' as *;
 header {
   min-height: 100vh;
-  background: url('./assets/forest.jpg'), $blue;
+  background: url("./assets/forest.jpg"), $blue;
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,7 +75,7 @@ header {
       transition: all 0.3 ease-in-out;
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0.5rem;
       }
@@ -108,7 +109,7 @@ header {
         @include tablet-landscape-up {
           padding: unset;
           &::after {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             width: 100%;

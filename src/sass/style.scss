@@ -1,13 +1,8 @@
-@import './variables';
-@import './mixins';
-@import './globals';
-@import './swiper';
+@use "./vendors/swiper";
+@use "./base/globals";
 
-@import './header';
-@import './hero';
-@import './about';
-@import './portfolio';
-@import './modal';
-@import './testimonials';
-@import './contact';
-@import './footer';
+@use './layout';
+
+@use "./components/modal";
+
+@use './themes/theme';

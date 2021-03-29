@@ -1,3 +1,4 @@
+@use '../abstracts' as *;
 .portfolio {
   background: $light-gray;
   display: grid;
@@ -18,7 +19,7 @@
     position: relative;
     text-transform: capitalize;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       width: 100%;
