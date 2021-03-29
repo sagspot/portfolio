@@ -1,1 +1,33 @@
 @use '../abstracts' as *;
+
+// :root {
+//   --pri-bg-color: #{$white};
+//   --sec-bg-color: #{$light-gray};
+//   --pri-color: #{$blue};
+//   --pri-transparent-color: #{$blue-transparent};
+//   --pri-dark-color: #{$dark-blue};
+//   --sec-color: #{$light-blue};
+//   --sec-light-color: #{$lighter-blue};
+//   --sec-lighter-color: #{$very-light-blue};
+//   --btn-color: #{$orange};
+//   --btn-light-color: #{$light-orange};
+//   --btn-bg-color: #{$very-light-orange};
+// }
+
+// .dark {
+// }
+
+:root {
+  --pri-bg-color: #{$white};
+  --sec-bg-color: #{$light-gray};
+  --sec-text-color: #{$red};
+  --pri-color: #{$blue};
+  --pri-transparent-color: #{$blue-transparent};
+  --pri-dark-color: #{$light-gray};
+  --sec-color: #{$light-blue};
+  --sec-light-color: #{$lighter-blue};
+  --sec-lighter-color: #{$very-light-blue};
+  --btn-color: #{$orange};
+  --btn-light-color: #{$light-orange};
+  --btn-bg-color: #{$very-light-orange};
+}

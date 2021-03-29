@@ -4,6 +4,7 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
+  background: var(--pri-bg-color);
   &-wrapper {
     @include tablet-landscape-up {
       display: flex;
@@ -50,12 +51,12 @@
           outline: none;
           cursor: pointer;
           path {
-            fill: $orange;
+            fill: var(--btn-color);
             transition: all 0.2s ease-in-out;
           }
           &:hover {
             path {
-              fill: $light-orange;
+              fill: var(--btn-light-color);
             }
           }
         }

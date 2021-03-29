@@ -7,7 +7,7 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background: rgba($color: $blue, $alpha: 0.9);
+  background: var(--pri-color);
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -24,7 +24,7 @@
     margin: auto;
     border-radius: 0.5rem;
     overflow-y: auto;
-    background: lighten($blue, 65%);
+    background: var(--sec-lighter-color);
   }
   &-btn {
     position: fixed;
@@ -32,7 +32,7 @@
     z-index: 1;
     width: 2.5rem;
     svg {
-      fill: $orange;
+      fill: var(--btn-color);
     }
   }
   &-close {

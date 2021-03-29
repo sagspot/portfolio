@@ -183,7 +183,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f25f3a;
+  color: var(--btn-color);
 }
 
 .swiper-button-prev.swiper-button-disabled,
@@ -307,7 +307,7 @@
   height: 8px;
   display: inline-block;
   border-radius: 50%;
-  background: #fac6bc;
+  background: var(--btn-light-color);
 }
 
 button.swiper-pagination-bullet {
@@ -326,7 +326,7 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #f25f3a;
+  background: var(--btn-color);
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets {
@@ -658,7 +658,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  color: #1d415d;
+  color: var(--pri-dark-color);
 }
 
 a {
@@ -667,7 +667,7 @@ a {
 }
 
 h2 {
-  color: #234f70;
+  color: var(---pri-color);
 }
 
 .logo {
@@ -709,14 +709,14 @@ h2 {
   border-radius: 8px;
   margin-bottom: 1.5rem;
   transition: background 0.2s ease-in-out;
-  color: white;
-  background: #f25f3a;
+  color: var(--pri-bg-color);
+  background: var(--btn-color);
 }
 .btn svg {
   margin-right: 8px;
 }
 .btn:hover {
-  background: #f9b1a4;
+  background: var(--btn-light-color);
 }
 
 ul {
@@ -731,6 +731,7 @@ ul {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  background: var(--pri-bg-color);
 }
 @media (min-width: 56.25rem) {
   .about-wrapper {
@@ -784,15 +785,15 @@ ul {
   cursor: pointer;
 }
 .about-software .items li svg path {
-  fill: #f25f3a;
+  fill: var(--btn-color);
   transition: all 0.2s ease-in-out;
 }
 .about-software .items li svg:hover path {
-  fill: #f9b1a4;
+  fill: var(--btn-light-color);
 }
 
 .contact {
-  background: #fafafa;
+  background: var(--sec-bg-color);
 }
 .contact h2 {
   padding-top: 3rem;
@@ -814,26 +815,26 @@ ul {
   min-width: 300px;
   padding: 0.25rem 1rem;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.25);
+  box-shadow: 0 0 7px 1px var(--pri-transparent-color);
 }
 .contact-items a svg {
   transform: scale(0.6);
 }
 .contact-items a svg path {
-  fill: #f25f3a;
+  fill: var(--btn-color);
   transition: fill 0.2s ease-in-out;
 }
 .contact-items a:hover {
-  color: #2a5d84;
-  box-shadow: 0 2px 7px 4px rgba(35, 79, 112, 0.25);
+  color: var(--sec-color);
+  box-shadow: 0 2px 7px 4px var(--pri-transparent-color);
 }
 .contact-items a:hover path {
-  fill: #f9b1a4;
+  fill: var(--btn-light-color);
 }
 
 .footer {
-  color: white;
-  background: #234f70;
+  color: #202945;
+  background: var(--pri-color);
 }
 .footer-wrapper {
   text-align: center;
@@ -873,23 +874,23 @@ ul {
   outline: none;
 }
 .footer .social-links svg path {
-  fill: #aecde5;
+  fill: var(--sec-light-color);
   transition: fill 0.2s ease-in-out;
 }
 .footer .social-links svg:hover path {
-  fill: #609ecd;
+  fill: var(--sec-color);
 }
 .footer .social-links svg:active {
   transform: scale(0.6);
 }
 .footer p {
   font-size: 0.8125rem;
-  color: #aecde5;
+  color: var(--sec-light-color);
 }
 
 header {
   min-height: 100vh;
-  background: url("./assets/forest.jpg"), #234f70;
+  background: url("./assets/forest.jpg"), var(--pri-color);
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -897,15 +898,15 @@ header {
 
 .nav {
   padding: 1rem 1.5rem;
-  background: white;
-  color: #234f70;
+  background: var(--pri-bg-color);
+  color: var(--sec-text-color);
 }
 .nav .logo-white {
   display: none;
 }
 @media (min-width: 56.25rem) {
   .nav {
-    color: white;
+    color: var(--pri-bg-color);
     background: transparent;
   }
   .nav .logo-white {
@@ -920,9 +921,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  color: #234f70;
-  background: white;
-  box-shadow: 0 5px 15px rgba(35, 79, 112, 0.1);
+  color: var(--sec-text-color);
+  background: var(--pri-bg-color);
+  box-shadow: 0 5px 15px var(--pri-transparent-color);
   z-index: 1000;
 }
 .nav-fixed .logo-white {
@@ -957,7 +958,7 @@ header {
   width: 2rem;
   height: 0.1875rem;
   transition: all 0.3s ease-in-out;
-  background: #f25f3a;
+  background: var(--btn-color);
 }
 .nav-toggle span {
   position: relative;
@@ -1009,7 +1010,7 @@ header {
     width: 100%;
     height: 0.1875rem;
     top: 1.875rem;
-    background: #f9b1a4;
+    background: var(--btn-light-color);
     transition: transform 0.3s ease-in-out;
   }
 }
@@ -1041,12 +1042,12 @@ header {
   display: grid;
   place-items: center;
   text-align: center;
-  color: white;
+  color: var(--pri-bg-color);
 }
 .hero img {
   width: 160px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--pri-bg-color);
   margin-bottom: 14px;
 }
 .hero h1 {
@@ -1058,20 +1059,20 @@ header {
 }
 .hero a {
   display: inline-block;
-  border: 1px solid white;
+  border: 1px solid var(--pri-bg-color);
   padding: 0.5rem 1rem;
   letter-spacing: 0.25rem;
-  color: white;
+  color: var(--pri-bg-color);
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
 .hero a:hover {
-  color: #f25f3a;
-  background: white;
+  color: var(--btn-color);
+  background: var(--pri-bg-color);
 }
 
 .portfolio {
-  background: #fafafa;
+  background: var(--sec-bg-color);
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -1098,7 +1099,7 @@ header {
   width: 100%;
   height: 2px;
   bottom: -6px;
-  background: #f25f3a;
+  background: var(--btn-color);
   transform: scale(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -1119,15 +1120,15 @@ header {
   width: 90%;
   border-radius: 8px;
   margin: 4rem auto 0;
-  background: white;
+  background: var(--pri-bg-color);
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.2);
+  box-shadow: 0 0 7px 1px var(--pri-transparent-color);
 }
 .portfolio-card:hover {
-  box-shadow: 2px 2px 7px 1px rgba(35, 79, 112, 0.2), -2px -2px 7px 1px rgba(35, 79, 112, 0.2);
+  box-shadow: 2px 2px 7px 1px var(--pri-transparent-color), -2px -2px 7px 1px var(--pri-transparent-color);
 }
 .portfolio-card:hover .card-preview {
-  box-shadow: 2px 2px 7px 1px rgba(35, 79, 112, 0.2), -2px -2px 7px 1px rgba(35, 79, 112, 0.2);
+  box-shadow: 2px 2px 7px 1px var(--pri-transparent-color), -2px -2px 7px 1px var(--pri-transparent-color);
 }
 .portfolio-card:hover .card-preview .preview {
   transform: scale(1.1);
@@ -1141,17 +1142,17 @@ header {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 8px;
-  background: white;
+  background: var(--pri-bg-color);
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.2);
+  box-shadow: 0 0 7px 1px var(--pri-transparent-color);
 }
 .portfolio-card .card-preview .preview {
   width: 90%;
   height: 90%;
-  box-shadow: 0 0 7px 1px rgba(35, 79, 112, 0.5);
+  box-shadow: 0 0 7px 1px var(--pri-transparent-color);
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
-  background: #234f70;
+  background: var(--pri-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1176,7 +1177,8 @@ header {
 }
 
 .testimonial {
-  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  background: var(--pri-bg-color);
 }
 .testimonial h2 {
   margin-top: 2rem;
@@ -1192,7 +1194,7 @@ header {
   width: 80px;
   border-radius: 50%;
   margin: 0 auto -3rem;
-  border: 0.125rem solid #feefec;
+  border: 0.125rem solid var(--btn-light-color);
   z-index: 10;
 }
 .testimonial-content {
@@ -1200,7 +1202,7 @@ header {
   position: relative;
   padding: 1rem 0;
   border-radius: 0.5rem;
-  background: #feefec;
+  background: var(--btn-bg-color);
 }
 .testimonial-content > * {
   width: 80%;
@@ -1222,7 +1224,7 @@ header {
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background: rgba(35, 79, 112, 0.9);
+  background: var(--pri-color);
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -1240,7 +1242,7 @@ header {
   margin: auto;
   border-radius: 0.5rem;
   overflow-y: auto;
-  background: #e8f1f8;
+  background: var(--sec-lighter-color);
 }
 .modal-btn {
   position: fixed;
@@ -1249,7 +1251,7 @@ header {
   width: 2.5rem;
 }
 .modal-btn svg {
-  fill: #f25f3a;
+  fill: var(--btn-color);
 }
 .modal-close {
   right: 3.25rem;
@@ -1302,6 +1304,20 @@ header {
     transform: scale(1);
     opacity: 0.4;
   }
+}
+:root {
+  --pri-bg-color: #202945;
+  --sec-bg-color: #273254;
+  --sec-text-color: #f50a0a;
+  --pri-color: #64a0ce;
+  --pri-transparent-color: #64a0ce33;
+  --pri-dark-color: #273254;
+  --sec-color: #27577c;
+  --sec-light-color: #28577b;
+  --sec-lighter-color: #0a161f;
+  --btn-color: #d2360f;
+  --btn-light-color: #f35a3f;
+  --btn-bg-color: #1e415c;
 }
 
 /*# sourceMappingURL=style.css.map */

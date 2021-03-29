@@ -175,7 +175,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $orange;
+  color: var(--btn-color);
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -277,7 +277,7 @@
   height: 8px;
   display: inline-block;
   border-radius: 50%;
-  background: lighten($light-orange, 5%);
+  background: var(--btn-light-color);
   // opacity: 0.2;
 }
 button.swiper-pagination-bullet {
@@ -294,7 +294,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: $orange;
+  background: var(--btn-color);
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;

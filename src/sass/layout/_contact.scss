@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .contact {
-  background: $light-gray;
+  background: var(--sec-bg-color);
   h2 {
     padding-top: 3rem;
     margin-bottom: 2rem;
@@ -19,20 +19,20 @@
       min-width: 300px;
       padding: 0.25rem 1rem;
       transition: all 0.2s ease-in-out;
-      box-shadow: 0 0 7px 1px rgba($color: $blue, $alpha: 0.25);
+      box-shadow: 0 0 7px 1px var(--pri-transparent-color);
       svg {
         transform: scale(0.6);
         path {
-          fill: $orange;
+          fill: var(--btn-color);
           transition: fill 0.2s ease-in-out;
         }
       }
       &:hover {
-        color: lighten($blue, 5%);
+        color: var(--sec-color);
         path {
-          fill: $light-orange;
+          fill: var(--btn-light-color);
         }
-        box-shadow: 0 2px 7px 4px rgba($color: $blue, $alpha: 0.25);
+        box-shadow: 0 2px 7px 4px var(--pri-transparent-color);
       }
     }
   }

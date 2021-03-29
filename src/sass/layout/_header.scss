@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 header {
   min-height: 100vh;
-  background: url("./assets/forest.jpg"), $blue;
+  background: url("./assets/forest.jpg"), var(--pri-color);
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,13 +9,13 @@ header {
 
 .nav {
   padding: 1rem 1.5rem;
-  background: $white;
-  color: $blue;
+  background: var(--pri-bg-color);
+  color: var(--sec-text-color);
   .logo-white {
     display: none;
   }
   @include tablet-landscape-up {
-    color: $white;
+    color: var(--pri-bg-color);
     background: transparent;
     .logo {
       &-white {
@@ -31,9 +31,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    color: $blue;
-    background: $white;
-    box-shadow: 0 5px 15px rgba($color: $blue, $alpha: 0.1);
+    color: var(--sec-text-color);
+    background: var(--pri-bg-color);
+    box-shadow: 0 5px 15px var(--pri-transparent-color);
     z-index: 1000;
     .logo {
       &-white {
@@ -68,7 +68,7 @@ header {
       width: 2rem;
       height: rem(3);
       transition: all 0.3s ease-in-out;
-      background: $orange;
+      background: var(--btn-color);
     }
     span {
       position: relative;
@@ -115,7 +115,7 @@ header {
             width: 100%;
             height: rem(3);
             top: rem(30);
-            background: $light-orange;
+            background: var(--btn-light-color);
             // transform: scale(0);
             transition: transform 0.3s ease-in-out;
           }

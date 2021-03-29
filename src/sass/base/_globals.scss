@@ -11,14 +11,14 @@ html {
 }
 body {
   font-family: "Lato", sans-serif;
-  color: darken($blue, 5%);
+  color: var(--pri-dark-color);
 }
 a {
   text-decoration: none;
   color: inherit;
 }
 h2 {
-  color: $blue;
+  color: var(---pri-color);
 }
 .logo {
   width: 120px;
@@ -49,13 +49,13 @@ h2 {
   border-radius: 8px;
   margin-bottom: 1.5rem;
   transition: background 0.2s ease-in-out;
-  color: $white;
-  background: $orange;
+  color: var(--pri-bg-color);
+  background: var(--btn-color);
   svg {
     margin-right: 8px;
   }
   &:hover {
-    background: $light-orange;
+    background: var(--btn-light-color);
   }
 }
 ul {
