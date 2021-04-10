@@ -150,6 +150,13 @@ header {
             transform: unset;
           }
         }
+        &.active {
+          @include tablet-landscape-up {
+            &::after {
+              transform: scale(1);
+            }
+          }
+        }
       }
 
       li:last-child {

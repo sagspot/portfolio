@@ -1,13 +1,13 @@
 import { navHead, navMenu, smoothScroll } from "../src/modules/nav.js";
 import { textEffect } from "../src/modules/text.js";
-import { particleJS } from "../src/modules/particles.js";
+import { particlesInit } from "../src/modules/particles_init.js";
 import { portfolio, viewBtn, closeModal } from "../src/modules/portfolio.js";
 import { testimonials } from "../src/modules/testimonials.js";
 
 const year = document.getElementById("year");
 year.textContent = new Date().getFullYear();
 
-// Google tags
+// --------------------------------------------- Google tags ---------------------------------------------
 const cv = document.getElementById("cv");
 const projects = document.getElementById("view-more");
 
@@ -25,8 +25,7 @@ projects.addEventListener("click", () =>
   })
 );
 
-// Dark theme
-
+// --------------------------------------------- Dark theme ---------------------------------------------
 const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme === "dark") document.body.classList.add("dark");

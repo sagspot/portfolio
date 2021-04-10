@@ -796,6 +796,11 @@ header {
     transform: scale(1);
   }
 }
+@media (min-width: 56.25rem) {
+  .nav-links .links a.active::after {
+    transform: scale(1);
+  }
+}
 .nav-links .links li:last-child {
   text-align: center;
 }
