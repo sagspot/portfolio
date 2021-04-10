@@ -24,15 +24,31 @@
   }
   a {
     display: inline-block;
+    position: relative;
     border: 1px solid var(--pri-bg-color);
     padding: 0.5rem 1rem;
     letter-spacing: 0.25rem;
     color: var(--pri-bg-color);
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      transform-origin: 50% 50%;
+      transition: width 0.15s ease-in-out;
+      background: var(--pri-bg-color);
+      z-index: -1;
+    }
     &:hover {
       color: var(--btn-color);
-      background: var(--pri-bg-color);
+      &::before {
+        width: 100%;
+      }
     }
   }
 }
