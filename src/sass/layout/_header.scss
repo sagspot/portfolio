@@ -9,26 +9,20 @@ header {
   background-repeat: no-repeat;
 }
 
-.dark {
-  .nav {
-    &-fixed {
-      .logo {
-        &-colored {
-          display: none;
-        }
-        &-white {
-          display: block;
-        }
-      }
+.nav {
+  position: relative;
+  padding: 1rem 1.5rem;
+  background: var(--pri-theme-bg);
+  color: var(--sec-text-color);
+  z-index: 100;
+  .logo-white {
+    display: none;
+
+    .dark & {
+      display: block;
     }
   }
-}
-
-.nav {
-  padding: 1rem 1.5rem;
-  background: var(--pri-bg-color);
-  color: var(--sec-text-color);
-  .logo-white {
+  .dark & .logo-colored {
     display: none;
   }
   @include tablet-landscape-up {
@@ -55,12 +49,19 @@ header {
     .logo {
       &-white {
         display: none;
+        .dark & {
+          display: block;
+        }
       }
       &-colored {
         display: block;
+        .dark & {
+          display: none;
+        }
       }
     }
   }
+
   &-center {
     @include tablet-landscape-up {
       padding: 0.25rem 0;
@@ -72,7 +73,7 @@ header {
   &-toggle {
     display: block;
     cursor: pointer;
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     transition: all 0.3s ease-in-out;
     @include tablet-landscape-up {
       display: none;
@@ -148,6 +149,13 @@ header {
             }
             transform: unset;
           }
+        }
+      }
+
+      li:last-child {
+        text-align: center;
+        @include tablet-landscape-up {
+          text-align: unset;
         }
       }
     }
