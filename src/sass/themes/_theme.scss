@@ -1,33 +1,35 @@
 @use '../abstracts' as *;
 
-// :root {
-//   --pri-bg-color: #{$white};
-//   --sec-bg-color: #{$light-gray};
-//   --pri-color: #{$blue};
-//   --pri-transparent-color: #{$blue-transparent};
-//   --pri-dark-color: #{$dark-blue};
-//   --sec-color: #{$light-blue};
-//   --sec-light-color: #{$lighter-blue};
-//   --sec-lighter-color: #{$very-light-blue};
-//   --btn-color: #{$orange};
-//   --btn-light-color: #{$light-orange};
-//   --btn-bg-color: #{$very-light-orange};
-// }
-
-// .dark {
-// }
-
 :root {
+  // colors
   --pri-bg-color: #{$white};
-  --sec-bg-color: #{$light-gray};
-  --sec-text-color: #{$red};
-  --pri-color: #{$blue};
-  --pri-transparent-color: #{$blue-transparent};
-  --pri-dark-color: #{$light-gray};
   --sec-color: #{$light-blue};
   --sec-light-color: #{$lighter-blue};
-  --sec-lighter-color: #{$very-light-blue};
   --btn-color: #{$orange};
   --btn-light-color: #{$light-orange};
-  --btn-bg-color: #{$very-light-orange};
+  --page-bullet-color: #{lighten($orange, 1%)};
+  --pri-color: #{$blue};
+  --pri-theme-color: #{$dark-blue};
+  --pri-theme-bg: #{$white};
+  --sec-theme-bg: #{$light-gray};
+  --modal-bg: #{$very-light-blue};
+  --pri-card-color: #{$white};
+  --sec-card-color: #{$very-light-orange};
+  --pri-transparent-color: #{$blue-transparent};
+  // fonts
+  --pri-font-weight: 500;
+}
+
+.dark {
+  // colors
+  --pri-color: #{$very-dark-blue};
+  --pri-theme-color: #{$grey};
+  --pri-theme-bg: #{$very-dark-blue};
+  --pri-card-color: #{lighten($very-dark-blue, 10%)};
+  --sec-theme-bg: #{lighten($very-dark-blue, 2%)};
+  --modal-bg: #{lighten($very-dark-blue, 3%)};
+  --sec-card-color: #{lighten($very-dark-blue, 10%)};
+  --pri-transparent-color: #{lighten($very-dark-blue, 2%)};
+  // fonts
+  --pri-font-weight: 300;
 }

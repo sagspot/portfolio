@@ -11,7 +11,8 @@ html {
 }
 body {
   font-family: "Lato", sans-serif;
-  color: var(--pri-dark-color);
+  color: var(--pri-theme-color);
+  background: var(--pri-theme-bg);
 }
 a {
   text-decoration: none;

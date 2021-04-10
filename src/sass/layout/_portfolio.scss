@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 .portfolio {
-  background: var(--sec-bg-color);
+  background: var(--sec-theme-bg);
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -48,7 +48,7 @@
     width: 90%;
     border-radius: 8px;
     margin: 4rem auto 0;
-    background: var(--pri-bg-color);
+    background: var(--pri-card-color);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 7px 1px var(--pri-transparent-color);
     &:hover {
@@ -72,7 +72,7 @@
         left: 50%;
         transform: translateX(-50%);
         border-radius: 8px;
-        background: var(--pri-bg-color);
+        background: var(--pri-card-color);
         transition: all 0.3s ease-in-out;
         box-shadow: 0 0 7px 1px var(--pri-transparent-color);
         .preview {

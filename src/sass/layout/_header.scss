@@ -7,6 +7,21 @@ header {
   background-repeat: no-repeat;
 }
 
+.dark {
+  .nav {
+    &-fixed {
+      .logo {
+        &-colored {
+          display: none;
+        }
+        &-white {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 .nav {
   padding: 1rem 1.5rem;
   background: var(--pri-bg-color);
@@ -32,7 +47,7 @@ header {
     left: 0;
     width: 100%;
     color: var(--sec-text-color);
-    background: var(--pri-bg-color);
+    background: var(--pri-theme-bg);
     box-shadow: 0 5px 15px var(--pri-transparent-color);
     z-index: 1000;
     .logo {
@@ -50,7 +65,6 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // outline: 1px solid red;
     }
   }
   &-toggle {
@@ -116,7 +130,6 @@ header {
             height: rem(3);
             top: rem(30);
             background: var(--btn-light-color);
-            // transform: scale(0);
             transition: transform 0.3s ease-in-out;
           }
         }

@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .contact {
-  background: var(--sec-bg-color);
+  background: var(--sec-theme-bg);
   h2 {
     padding-top: 3rem;
     margin-bottom: 2rem;
@@ -19,9 +19,10 @@
       min-width: 300px;
       padding: 0.25rem 1rem;
       transition: all 0.2s ease-in-out;
-      box-shadow: 0 0 7px 1px var(--pri-transparent-color);
+      background: var(--sec-card-color);
       svg {
         transform: scale(0.6);
+        background: var(--sec-card-color);
         path {
           fill: var(--btn-color);
           transition: fill 0.2s ease-in-out;
@@ -29,6 +30,7 @@
       }
       &:hover {
         color: var(--sec-color);
+        box-shadow: 0 0 7px 1px var(--pri-transparent-color);
         path {
           fill: var(--btn-light-color);
         }

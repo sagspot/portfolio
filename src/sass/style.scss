@@ -1,8 +1,6 @@
-@use "./vendors/swiper";
-@use "./base/globals";
-
-@use './layout';
-
+@use "./vendors";
+@use "./vendor-extensions";
+@use "./base";
+@use "./layout";
 @use "./components";
-
-@use './themes/theme';
+@use "./themes";

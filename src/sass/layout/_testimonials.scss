@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
+
 .testimonial {
   padding-bottom: 6rem;
-  background: var(--pri-bg-color);
   h2 {
     margin-top: 2rem;
     margin-bottom: 6rem;
@@ -15,7 +15,7 @@
       width: 80px;
       border-radius: 50%;
       margin: 0 auto -3rem;
-      border: rem(2) solid var(--btn-light-color);
+      border: rem(2) solid var(--sec-card-color);
       z-index: 10;
     }
   }
@@ -24,7 +24,7 @@
     position: relative;
     padding: 1rem 0;
     border-radius: rem(8);
-    background: var(--btn-bg-color);
+    background: var(--sec-card-color);
     > * {
       width: 80%;
       margin-left: auto;
@@ -36,6 +36,7 @@
     }
     p {
       margin-bottom: 2rem;
+      font-weight: var(--pri-font-weight);
     }
   }
 }

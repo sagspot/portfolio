@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--btn-color);
+}
+.swiper-pagination-bullet {
+  background: var(--page-bullet-color);
+}
+.swiper-pagination-bullet-active {
+  background: var(--btn-color);
+}
