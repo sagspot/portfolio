@@ -5,6 +5,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 0.15s ease-in-out;
+}
+*::selection {
+  color: var(--pri-bg-color);
+  background: var(--btn-color);
 }
 html {
   scroll-behavior: smooth;

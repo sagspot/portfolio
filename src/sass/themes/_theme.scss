@@ -32,4 +32,7 @@
   --pri-transparent-color: #{lighten($very-dark-blue, 2%)};
   // fonts
   --pri-font-weight: 300;
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
 }

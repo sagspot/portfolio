@@ -1,5 +1,7 @@
 @use '../abstracts' as *;
+
 header {
+  position: relative;
   min-height: 100vh;
   background: url("./assets/forest.jpg"), var(--pri-color);
   background-blend-mode: multiply;
@@ -108,6 +110,8 @@ header {
     .links {
       @include tablet-landscape-up {
         display: flex;
+        align-items: center;
+        min-height: rem(40);
       }
       a {
         font-size: 0.9rem;
@@ -128,8 +132,11 @@ header {
             position: absolute;
             width: 100%;
             height: rem(3);
-            top: rem(30);
+            top: rem(25);
+            border-radius: 50px;
             background: var(--btn-light-color);
+            transform: scale(0);
+            transform-origin: center left;
             transition: transform 0.3s ease-in-out;
           }
         }
@@ -161,5 +168,11 @@ header {
         }
       }
     }
+  }
+}
+
+button {
+  &#theme {
+    cursor: pointer !important;
   }
 }

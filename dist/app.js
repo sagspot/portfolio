@@ -1,11 +1,13 @@
 import { navHead, navMenu, smoothScroll } from "../src/modules/nav.js";
 import { textEffect } from "../src/modules/text.js";
+import { particleJS } from "../src/modules/particles.js";
 import { portfolio, viewBtn, closeModal } from "../src/modules/portfolio.js";
 import { testimonials } from "../src/modules/testimonials.js";
 
 const year = document.getElementById("year");
 year.textContent = new Date().getFullYear();
 
+// Google tags
 const cv = document.getElementById("cv");
 const projects = document.getElementById("view-more");
 
@@ -22,3 +24,20 @@ projects.addEventListener("click", () =>
     event_label: "all projects",
   })
 );
+
+// Dark theme
+
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme === "dark") document.body.classList.add("dark");
+
+const themeBtn = document.querySelector(".theme-switch-wrapper");
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  let theme = "light";
+  if (document.body.classList.contains("dark")) theme = "dark";
+
+  localStorage.setItem("theme", theme);
+});
