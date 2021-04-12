@@ -22,6 +22,7 @@
     p {
       line-height: 1.5;
       margin-bottom: 2rem;
+      font-weight: var(--pri-font-weight);
       @include tablet-landscape-up {
         line-height: 2;
       }

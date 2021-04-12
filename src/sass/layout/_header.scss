@@ -3,7 +3,7 @@
 header {
   position: relative;
   min-height: 100vh;
-  background: url("./assets/forest.jpg"), var(--pri-color);
+  background: url('./assets/forest.jpg'), var(--pri-color);
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@ header {
   position: relative;
   padding: 1rem 1.5rem;
   background: var(--pri-theme-bg);
-  color: var(--sec-text-color);
+  color: var(--pri-theme-color);
   z-index: 100;
   .logo-white {
     display: none;
@@ -42,8 +42,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    color: var(--sec-text-color);
-    background: var(--pri-theme-bg);
+    color: var(--pri-theme-color);
+    background: var(--pri-nav-bg);
     box-shadow: 0 5px 15px var(--pri-transparent-color);
     z-index: 1000;
     .logo {
@@ -92,7 +92,7 @@ header {
       transition: all 0.3 ease-in-out;
       &::before,
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0.5rem;
       }
@@ -128,16 +128,16 @@ header {
         @include tablet-landscape-up {
           padding: unset;
           &::after {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             width: 100%;
-            height: rem(3);
+            height: rem(2);
             top: rem(25);
             border-radius: 50px;
             background: var(--btn-light-color);
             transform: scale(0);
-            transform-origin: center left;
+            transform-origin: right bottom;
             transition: transform 0.3s ease-in-out;
           }
         }
@@ -145,6 +145,7 @@ header {
           transform: translateX(rem(8));
           @include tablet-landscape-up {
             &::after {
+              transform-origin: left bottom;
               transform: scale(1);
             }
             transform: unset;

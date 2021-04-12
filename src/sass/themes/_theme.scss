@@ -11,13 +11,16 @@
   --pri-color: #{$blue};
   --pri-theme-color: #{$dark-blue};
   --pri-theme-bg: #{$white};
+  --pri-nav-bg: #{$white};
   --sec-theme-bg: #{$light-gray};
   --modal-bg: #{$very-light-blue};
   --pri-card-color: #{$white};
   --sec-card-color: #{$very-light-orange};
   --pri-transparent-color: #{$blue-transparent};
+  // --sec-text-color: red;
   // fonts
   --pri-font-weight: 500;
+  --letter-spacing: inherit;
 }
 
 .dark {
@@ -25,6 +28,8 @@
   --pri-color: #{$very-dark-blue};
   --pri-theme-color: #{$grey};
   --pri-theme-bg: #{$very-dark-blue};
+  --pri-nav-bg: #{lighten($very-dark-blue, 5%)};
+  --btn-color: #{$salmon};
   --pri-card-color: #{lighten($very-dark-blue, 10%)};
   --sec-theme-bg: #{lighten($very-dark-blue, 2%)};
   --modal-bg: #{lighten($very-dark-blue, 3%)};
@@ -32,6 +37,7 @@
   --pri-transparent-color: #{lighten($very-dark-blue, 2%)};
   // fonts
   --pri-font-weight: 300;
+  --letter-spacing: 1px;
   img {
     filter: brightness(0.8) contrast(1.2);
   }
