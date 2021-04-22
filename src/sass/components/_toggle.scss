@@ -1,10 +1,13 @@
+@use '../abstracts' as *;
+
 .theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  display: inline-block;
   height: 34px;
   position: relative;
   width: 60px;
+  transform: scale(0.7);
+  @include tablet-landscape-up {
+    transform: scale(0.75);
+  }
 
   .dark & .slider {
     background-color: var(--pri-card-color);
@@ -40,7 +43,7 @@
   &:before {
     background-color: #fff;
     bottom: 4px;
-    content: "";
+    content: '';
     height: 26px;
     right: 4px;
     position: absolute;

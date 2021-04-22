@@ -32,7 +32,7 @@ h2 {
   }
 }
 .container {
-  padding: 2rem;
+  padding: 2rem 1rem;
   @include tablet-landscape-up {
     padding: 2rem 4rem;
   }

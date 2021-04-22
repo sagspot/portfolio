@@ -2,8 +2,8 @@
 
 .about {
   // min-height: 100vh;
-  display: grid;
-  place-items: center;
+  // display: grid;
+  // place-items: center;
   &-wrapper {
     @include tablet-landscape-up {
       display: flex;
@@ -39,13 +39,14 @@
   &-software {
     @include tablet-landscape-up {
       max-width: 50%;
+      margin: auto;
     }
     .items {
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px 10px;
       li {
-        flex-basis: 33%;
         flex-direction: column;
-        margin-bottom: 1.5rem;
         text-transform: uppercase;
         svg {
           margin-top: 0.25rem;

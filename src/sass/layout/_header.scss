@@ -11,10 +11,13 @@ header {
 
 .nav {
   position: relative;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0.25rem;
   background: var(--pri-theme-bg);
   color: var(--pri-theme-color);
   z-index: 100;
+  @include tablet-landscape-up {
+    padding: 1rem 1.5rem;
+  }
   .logo-white {
     display: none;
 
@@ -70,6 +73,19 @@ header {
       justify-content: space-between;
     }
   }
+  &-brand {
+    .scroll-link {
+      flex: 1;
+      @include tablet-landscape-up {
+        flex: unset;
+      }
+    }
+    .theme-switch-wrapper {
+      @include tablet-landscape-up {
+        display: none;
+      }
+    }
+  }
   &-toggle {
     display: block;
     cursor: pointer;
@@ -82,8 +98,9 @@ header {
     span::before,
     span::after {
       display: block;
-      width: 2rem;
-      height: rem(3);
+      width: 1.5rem;
+      height: 0.18rem;
+      border-radius: rem(100);
       transition: all 0.3s ease-in-out;
       background: var(--btn-color);
     }
@@ -161,9 +178,9 @@ header {
       }
 
       li:last-child {
-        text-align: center;
+        display: none;
         @include tablet-landscape-up {
-          text-align: unset;
+          display: flex;
         }
       }
     }

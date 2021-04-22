@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "sass src/sass:dist --watch --style=compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
