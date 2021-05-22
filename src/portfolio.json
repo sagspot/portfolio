@@ -1,115 +1,116 @@
 [
   {
-    "id" : 1,
-    "title" : "Portfolio",
-    "category" : "websites",
-    "img" : "/dist/assets/portfolio-website.jpg",
-    "source" : "https://github.com/sagspot/portfolio",
-    "url" : "https://sagspot.netlify.app/",
-    "desc" : "My portfolio website. Built with HTML, SCSS & Javascript, with data from a JSON file."
+    "id": 1,
+    "title": "Portfolio",
+    "category": "websites",
+    "img": "/dist/assets/portfolio-website.jpg",
+    "source": "https://github.com/sagspot/portfolio",
+    "url": "https://sagspot.netlify.app/",
+    "desc": "My portfolio website. Built with HTML, SCSS & Javascript, with data from a JSON file."
   },
   {
-    "id" : 2,
-    "title" : "Sagspot",
-    "category" : "logos",
-    "img" : "/dist/assets/sagspot.jpg",
-    "desc" : "Sagspot logo was designed with adobe illustrator"
+    "id": 2,
+    "title": "Sagspot",
+    "category": "logos",
+    "img": "/dist/assets/sagspot.jpg",
+    "desc": "Sagspot logo was designed with adobe illustrator"
   },
   {
-    "id" : 3,
-    "title" : "cvPoa",
-    "category" : "websites",
-    "img" : "/dist/assets/cvpoa-website.jpg",
-    "url" : "https://cvpoa.co.ke/",
-    "desc" : "Online cv builder. Built with react & django in collaboration with a partner."
+    "id": 3,
+    "title": "cvPoa",
+    "category": "websites",
+    "img": "/dist/assets/cvpoa-website.jpg",
+    "url": "https://cvpoa.co.ke/",
+    "desc": "Online cv builder. Built with react & django in collaboration with a partner."
   },
   {
-    "id" : 4,
-    "title" : "Nia Foundation",
-    "category" : "logos",
-    "img" : "/dist/assets/nia.jpg",
-    "desc" : "Nia Foundation logo was designed with adobe illustrator"
+    "id": 4,
+    "title": "Nia Foundation",
+    "category": "logos",
+    "img": "/dist/assets/nia.jpg",
+    "desc": "Nia Foundation logo was designed with adobe illustrator"
   },
   {
-    "id" : 5,
-    "title" : "cvPoa Christmass Poster",
-    "category" : "posters",
-    "img" : "/dist/assets/cvpoa-christmas-wishes.jpg",
-    "desc" : "This poster was designed with adobe photoshop."
-  }, 
-  {
-    "id" : 6,
-    "title" : "Bigmind Show",
-    "category" : "posters",
-    "img" : "/dist/assets/bigmind.jpg",
-    "desc" : "This poster was designed with adobe photoshop."
+    "id": 5,
+    "title": "cvPoa Christmass Poster",
+    "category": "posters",
+    "img": "/dist/assets/cvpoa-christmas-wishes.jpg",
+    "desc": "This poster was designed with adobe photoshop."
   },
   {
-    "id" : 7,
-    "title" : "Easybank",
-    "category" : "websites",
-    "img" : "/dist/assets/easybank.jpg",
-    "source" : "https://github.com/sagspot/easybank-landing-page",
-    "url" : "https://easybank-landing-page-git-master.sagspot.vercel.app/",
-    "desc" : "A challenge from the Frontend Mentor website. Built with HTML, SCSS & Javascript."
+    "id": 6,
+    "title": "Bigmind Show",
+    "category": "posters",
+    "img": "/dist/assets/bigmind.jpg",
+    "desc": "This poster was designed with adobe photoshop."
   },
   {
-    "id" : 8,
-    "title" : "Afya Mtaani Nutrition Program",
-    "category" : "posters",
-    "img" : "/dist/assets/nutrition-program.jpg",
-    "desc" : "This poster was designed with adobe photoshop."
-  },  
-  {
-    "id" : 9,
-    "title" : "Manage",
-    "category" : "websites",
-    "img" : "/dist/assets/manage-website.jpg",
-    "source" : "https://github.com/sagspot/manage-landing-page",
-    "url" : "https://manage-landing-page-git-master.sagspot.vercel.app/",
-    "desc" : "A challenge from the Frontend Mentor website. Built with HTML, SCSS & Javascript."
-  }, 
-  {
-    "id" : 10,
-    "title" : "254Hope",
-    "category" : "logos",
-    "img" : "/dist/assets/hope-logo.jpg",
-    "desc" : "254Hope logo was designed with adobe illustrator"
-  },  
-  {
-    "id" : 11,
-    "title" : "Bill for Sec KMPDU",
-    "category" : "posters",
-    "img" : "/dist/assets/bill-for-sec.jpg",
-    "desc" : "This poster was designed with adobe photoshop"
-  },{
-    "id" : 12,
-    "title" : "Bill Karueru",
-    "category" : "logos",
-    "img" : "/dist/assets/bill-karueru.jpg",
-    "desc" : "Bill Karueru logo was designed with adobe photoshop"
+    "id": 7,
+    "title": "Easybank",
+    "category": "websites",
+    "img": "/dist/assets/easybank.jpg",
+    "source": "https://github.com/sagspot/easybank-landing-page",
+    "url": "https://easybank-landing-page-git-master.sagspot.vercel.app/",
+    "desc": "A challenge from the Frontend Mentor website. Built with HTML, SCSS & Javascript."
   },
   {
-    "id" : 13,
-    "title" : "Chat App Illustration",
-    "category" : "websites",
-    "img" : "/dist/assets/chat-app-illustration.jpg",
-    "source" : "https://github.com/sagspot/chat-app-css-illustration",
-    "url" : "http://chat-app-css-illustration-git-master.sagspot.vercel.app/",
-    "desc" : "A challenge from the Frontend Mentor website. Built with HTML & SCSS."
+    "id": 8,
+    "title": "Carol for Liason Officer KMPDU",
+    "category": "posters",
+    "img": "/dist/assets/carol-for-liason.jpg",
+    "desc": "This poster was designed with adobe photoshop."
   },
   {
-    "id" : 14,
-    "title" : "Afya Mtaani",
-    "category" : "logos",
-    "img" : "/dist/assets/afya-mtaani.jpg",
-    "desc" : "Afya Mtaani logo was designed with adobe illustrator"
+    "id": 9,
+    "title": "Manage",
+    "category": "websites",
+    "img": "/dist/assets/manage-website.jpg",
+    "source": "https://github.com/sagspot/manage-landing-page",
+    "url": "https://manage-landing-page-git-master.sagspot.vercel.app/",
+    "desc": "A challenge from the Frontend Mentor website. Built with HTML, SCSS & Javascript."
   },
   {
-    "id" : 15,
-    "title" : "The Covid Hero",
-    "category" : "posters",
-    "img" : "/dist/assets/covid-hero.jpg",
-    "desc" : "This poster was designed with adobe photoshop"
+    "id": 10,
+    "title": "254Hope",
+    "category": "logos",
+    "img": "/dist/assets/hope-logo.jpg",
+    "desc": "254Hope logo was designed with adobe illustrator"
+  },
+  {
+    "id": 11,
+    "title": "Bill for Sec KMPDU",
+    "category": "posters",
+    "img": "/dist/assets/bill-for-sec.jpg",
+    "desc": "This poster was designed with adobe photoshop"
+  },
+  {
+    "id": 12,
+    "title": "Bill Karueru",
+    "category": "logos",
+    "img": "/dist/assets/bill-karueru.jpg",
+    "desc": "Bill Karueru logo was designed with adobe photoshop"
+  },
+  {
+    "id": 13,
+    "title": "Chat App Illustration",
+    "category": "websites",
+    "img": "/dist/assets/chat-app-illustration.jpg",
+    "source": "https://github.com/sagspot/chat-app-css-illustration",
+    "url": "http://chat-app-css-illustration-git-master.sagspot.vercel.app/",
+    "desc": "A challenge from the Frontend Mentor website. Built with HTML & SCSS."
+  },
+  {
+    "id": 14,
+    "title": "Afya Mtaani",
+    "category": "logos",
+    "img": "/dist/assets/afya-mtaani.jpg",
+    "desc": "Afya Mtaani logo was designed with adobe illustrator"
+  },
+  {
+    "id": 15,
+    "title": "Carol for Treasurer KMPDU",
+    "category": "posters",
+    "img": "/dist/assets/carol-for-treasurer.jpg",
+    "desc": "This poster was designed with adobe photoshop"
   }
 ]

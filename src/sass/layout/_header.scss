@@ -49,6 +49,10 @@ header {
     background: var(--pri-nav-bg);
     box-shadow: 0 5px 15px var(--pri-transparent-color);
     z-index: 1000;
+    @include tablet-landscape-up {
+      padding-top: 0.75rem;
+      padding-bottom: 0.25rem;
+    }
     .logo {
       &-white {
         display: none;
