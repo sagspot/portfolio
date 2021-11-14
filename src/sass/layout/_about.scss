@@ -43,24 +43,22 @@
     }
     .items {
       display: grid;
+      justify-items: center;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px 10px;
-      li {
-        flex-direction: column;
+
+      > li {
+        display: grid;
+        justify-items: center;
         text-transform: uppercase;
-        svg {
-          margin-top: 0.25rem;
-          outline: none;
-          cursor: pointer;
-          path {
-            fill: var(--btn-color);
-            transition: all 0.2s ease-in-out;
-          }
-          &:hover {
-            path {
-              fill: var(--btn-light-color);
-            }
-          }
+        cursor: pointer;
+
+        img {
+          width: 50px;
+        }
+
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
