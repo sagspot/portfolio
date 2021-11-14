@@ -143,6 +143,38 @@
   },
   {
     "id": 13,
+    "title": "Sagspot",
+    "category": "logo",
+    "img": "/dist/assets/sagspot.jpg",
+    "desc": "Adobe Illustrator",
+    "stacks": [{ "id": "lsp1", "name": "Adobe Illustrator" }]
+  },
+  {
+    "id": 14,
+    "title": "Nia Foundation",
+    "category": "logo",
+    "img": "/dist/assets/nia.jpg",
+    "desc": "Adobe Illustrator",
+    "stacks": [{ "id": "lnf1", "name": "Adobe Illustrator" }]
+  },
+  {
+    "id": 15,
+    "title": "cvPoa Christmass Poster",
+    "category": "poster",
+    "img": "/dist/assets/cvpoa-christmas-wishes.jpg",
+    "desc": "Adobe Photoshop.",
+    "stacks": [{ "id": "pcp1", "name": "Adobe Photoshop" }]
+  },
+  {
+    "id": 16,
+    "title": "Bigmind Show",
+    "category": "poster",
+    "img": "/dist/assets/bigmind.jpg",
+    "desc": "Adobe Photoshop.",
+    "stacks": [{ "id": "pbg1", "name": "Adobe Photoshop" }]
+  },
+  {
+    "id": 17,
     "title": "Easybank",
     "category": "website",
     "img": "/dist/assets/easybank.jpg",
@@ -156,7 +188,15 @@
     ]
   },
   {
-    "id": 14,
+    "id": 18,
+    "title": "Carol for Liason Officer KMPDU",
+    "category": "poster",
+    "img": "/dist/assets/carol-for-liason.jpg",
+    "desc": "Adobe Photoshop",
+    "stacks": [{ "id": "pck1", "name": "Adobe Photoshop" }]
+  },
+  {
+    "id": 19,
     "title": "Manage",
     "category": "website",
     "img": "/dist/assets/manage-website.jpg",
@@ -170,7 +210,31 @@
     ]
   },
   {
-    "id": 15,
+    "id": 20,
+    "title": "254Hope",
+    "category": "logo",
+    "img": "/dist/assets/hope-logo.jpg",
+    "desc": "Adobe Illustrator",
+    "stacks": [{ "id": "lhp1", "name": "Adobe Illustrator" }]
+  },
+  {
+    "id": 21,
+    "title": "Bill for Sec KMPDU",
+    "category": "poster",
+    "img": "/dist/assets/bill-for-sec.jpg",
+    "desc": "Adobe Photoshop",
+    "stacks": [{ "id": "pbk1", "name": "Adobe Photoshop" }]
+  },
+  {
+    "id": 22,
+    "title": "Bill Karueru",
+    "category": "logo",
+    "img": "/dist/assets/bill-karueru.jpg",
+    "desc": "Adobe Photoshop",
+    "stacks": [{ "id": "lbk1", "name": "Adobe Photoshop" }]
+  },
+  {
+    "id": 23,
     "title": "Chat App Illustration",
     "category": "website",
     "img": "/dist/assets/chat-app-illustration.jpg",
@@ -181,5 +245,21 @@
       { "id": "wcai1", "name": "HTML" },
       { "id": "wcai2", "name": "SCSS" }
     ]
+  },
+  {
+    "id": 24,
+    "title": "Afya Mtaani",
+    "category": "logo",
+    "img": "/dist/assets/afya-mtaani.jpg",
+    "desc": "Adobe Illustrator",
+    "stacks": [{ "id": "lam1", "name": "Adobe Illustrator" }]
+  },
+  {
+    "id": 25,
+    "title": "Carol for Treasurer KMPDU",
+    "category": "poster",
+    "img": "/dist/assets/carol-for-treasurer.jpg",
+    "desc": "Adobe Photoshop",
+    "stacks": [{ "id": "pstk1", "name": "Adobe Photoshop" }]
   }
 ]

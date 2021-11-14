@@ -34,12 +34,13 @@ const testimonials = (xhr.onreadystatechange = function () {
         prevEl: '.swiper-button-prev',
       },
     });
-  } else
-    console.log({
-      state: xhr.readyState,
-      status: xhr.status,
-      text: xhr.statusText,
-    });
+  }
+  // else
+  //   console.log({
+  //     state: xhr.readyState,
+  //     status: xhr.status,
+  //     text: xhr.statusText,
+  //   });
 });
 xhr.send();
 
