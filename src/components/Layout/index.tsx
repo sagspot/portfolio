@@ -1,16 +1,15 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 import Footer from './footer';
 import NavBar from './NavBar';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout = (props: Props) => {
+const Layout = (props: any) => {
   return (
     <>
       <NavBar />
-      {props.children}
+      <Box as="Main" minH="calc(100vh - 115px)" {...props}>
+        {props.children}
+      </Box>
       <Footer />
     </>
   );

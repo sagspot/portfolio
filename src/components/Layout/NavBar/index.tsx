@@ -30,7 +30,7 @@ const NavBar = () => {
         borderStyle="solid"
         align="center"
         borderColor={useColorModeValue('gray.200', 'gray.900')}
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue('white', 'brand.100')}
         color={useColorModeValue('gray.600', 'white')}
       >
         <Flex
