@@ -11,7 +11,8 @@
     "Formik",
     "mpesa",
     "persistor",
-    "nextauth"
+    "nextauth",
+    "Swiper"
   ],
   "ignoreWords": [],
   "import": []

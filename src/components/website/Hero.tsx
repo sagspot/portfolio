@@ -14,6 +14,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <Flex
+      as="section"
       w="full"
       h="90vh"
       backgroundImage="url(forest.jpg)"

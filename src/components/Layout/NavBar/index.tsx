@@ -21,7 +21,7 @@ const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box position="sticky" top={0} zIndex={99}>
+    <Box position="sticky" top={0} zIndex={99} as="header">
       <Flex
         minH={'60px'}
         py={{ base: 2 }}
