@@ -5,7 +5,7 @@ const styles = {
     body: {
       lineHeight: 'base',
       color: mode('brand.100', 'white')(props),
-      bg: mode('white', 'brand.100')(props),
+      bg: mode('white', 'brand.300')(props),
     },
   }),
 };

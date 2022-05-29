@@ -11,7 +11,7 @@ export default function Homepage() {
       <Hero />
       <About />
       <Portfolio />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Contact />
     </Layout>
   );

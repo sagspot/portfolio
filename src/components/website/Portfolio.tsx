@@ -9,7 +9,7 @@ import {
   Link,
   SimpleGrid,
   Text,
-  useColorModeValue,
+  useColorModeValue as mode,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
@@ -26,7 +26,7 @@ const Portfolio = (props: Props) => {
       as="section"
       px={[6, 8, 16]}
       py={[4, 6, 16]}
-      bg={useColorModeValue('blackAlpha.50', 'brand.100')}
+      bg={mode('blackAlpha.50', 'brand.200')}
     >
       <Heading as="h2" size="md" textAlign="center">
         My Portfolio
@@ -42,6 +42,7 @@ const Portfolio = (props: Props) => {
             mt={16}
             rounded="base"
             shadow="0 0 8px 1px rgba(0,0,0,0.25)"
+            bg={mode('white', 'blue.700')}
             role="group"
           >
             <Box
@@ -50,7 +51,7 @@ const Portfolio = (props: Props) => {
               mt="-16"
               rounded="base"
               border="8px solid"
-              borderColor="white"
+              borderColor={mode('white', 'blue.700')}
               overflow="hidden"
               shadow="0 0 8px 1px rgba(0,0,0,0.25)"
               transition="all .15s ease-in-out"
