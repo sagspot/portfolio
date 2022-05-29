@@ -10,13 +10,11 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import React from 'react';
-// import { testimonials } from '../../data';
-
+import { TestimonialType } from '../../types';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-const Testimonials = () => {
-  const testimonials = [{}, {}, {}, {}];
+const Testimonials = ({ data }: { data: TestimonialType[] }) => {
   return (
     <Box as="section" id="testimonials" px={[6, 8, 16]} py={[4, 6, 16]}>
       <Heading as="h2" size="md" textAlign="center" mb={10}>
@@ -45,7 +43,7 @@ const Testimonials = () => {
           },
         }}
       >
-        {testimonials.map((testimonial, i) => (
+        {data.map((testimonial, i) => (
           <SwiperSlide key={i}>
             <Flex
               direction="column"
@@ -62,7 +60,7 @@ const Testimonials = () => {
                 borderColor={mode('red.50', 'brand.200')}
               >
                 <Image
-                  src="/images/omar.webp"
+                  src={testimonial.img}
                   alt=""
                   layout="fill"
                   objectFit="cover"
@@ -71,12 +69,11 @@ const Testimonials = () => {
 
               <Box pt={16} pb={8} bg={mode('red.100', 'blue.700')}>
                 <Heading as="h3" size="sm">
-                  Project 1
+                  {testimonial.name}
                 </Heading>
 
                 <Text width={['90%', null, '80%']} mx="auto">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Culpa, quaerat?
+                  {testimonial.desc}
                 </Text>
               </Box>
             </Flex>

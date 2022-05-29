@@ -16,7 +16,7 @@ import NextLink from 'next/link';
 import React from 'react';
 import { CgMoreO } from 'react-icons/cg';
 import { VscGithubAlt } from 'react-icons/vsc';
-import { PortfolioType } from '../../types/portfolio';
+import { PortfolioType } from '../../types';
 
 const Portfolio = ({ data }: { data: PortfolioType[] }) => {
   return (
