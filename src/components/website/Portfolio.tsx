@@ -25,7 +25,7 @@ const Portfolio = ({ data }: { data: PortfolioType[] }) => {
       id="portfolio"
       px={[6, 8, 16]}
       py={[4, 6, 16]}
-      bg={mode('blackAlpha.50', 'brand.200')}
+      bg={mode('blackAlpha.50', 'blue.800')}
     >
       <Heading as="h2" size="md" textAlign="center">
         My Portfolio

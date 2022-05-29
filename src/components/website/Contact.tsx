@@ -35,7 +35,7 @@ const Card = ({ content, href, icon }: Props) => {
         bg={useColorModeValue('red.100', 'blue.700')}
         rounded="base"
       >
-        <Circle size={12} mr={2} bg="accent.100">
+        <Circle size={12} mr={2} color="white" bg="accent.100">
           <Icon as={icon} boxSize={5} />
         </Circle>
         {content}
@@ -51,7 +51,7 @@ const Contact = () => {
       id="contact"
       px={[6, 8, 16]}
       py={[4, 6, 16]}
-      bg={useColorModeValue('blackAlpha.50', 'brand.100')}
+      bg={useColorModeValue('blackAlpha.50', 'blue.800')}
     >
       <Heading as="h2" size="md" textAlign="center">
         Contact Me

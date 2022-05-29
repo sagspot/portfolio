@@ -10,8 +10,20 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
+// import Particles from 'react-tsparticles';
+// import { loadFull } from 'tsparticles';
+// import type { Engine } from 'tsparticles-engine';
+// import { ISourceOptions } from 'tsparticles-engine';
+// import particlesConfig from '../../data/particlesConfig.json';
+// import styles from './Particles.module.css';
 
 const Hero = () => {
+  // const particlesInit = React.useCallback((engine: Engine) => {
+  //   loadFull(engine);
+  // }, []);
+
+  // tsParticles.load(particlesInit);
+
   return (
     <Flex
       as="section"
@@ -23,7 +35,14 @@ const Hero = () => {
       backgroundSize="cover"
       backgroundBlendMode="multiply"
       backgroundRepeat="no-repeat"
+      position="relative"
     >
+      {/* <Particles
+        id={styles.particles}
+        options={particlesConfig as ISourceOptions}
+        init={particlesInit}
+      /> */}
+
       <VStack
         w="full"
         justify="center"

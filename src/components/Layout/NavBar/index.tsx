@@ -26,11 +26,9 @@ const NavBar = () => {
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle="solid"
         align="center"
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        bg={useColorModeValue('white', 'brand.100')}
+        shadow="base"
+        bg={useColorModeValue('white', 'brand.300')}
         color={useColorModeValue('gray.600', 'white')}
       >
         <Flex
