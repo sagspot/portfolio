@@ -8,7 +8,7 @@ const PortfolioSchema = new mongoose.Schema(
     url: { type: String, trim: true },
     desc: { type: String, trim: true },
     stacks: { name: { type: String, trim: true } },
-    category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
+    category: { type: String, enum: ['website', 'api'], required: true },
   },
   { timestamps: true }
 );

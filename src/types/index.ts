@@ -5,6 +5,7 @@ export interface PortfolioType {
   desc: string;
   source?: string;
   url: string;
+  category?: 'api' | 'website';
 }
 
 export interface TestimonialType {

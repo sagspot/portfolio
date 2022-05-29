@@ -7,7 +7,7 @@ const Layout = (props: any) => {
   return (
     <>
       <NavBar />
-      <Box as="Main" minH="calc(100vh - 115px)" {...props}>
+      <Box as="main" minH="calc(100vh - 115px)" {...props}>
         {props.children}
       </Box>
       <Footer />

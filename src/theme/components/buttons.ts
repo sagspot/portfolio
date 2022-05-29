@@ -1,4 +1,5 @@
 import { ComponentStyleConfig } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
 const Button: ComponentStyleConfig = {
   baseStyle: {
@@ -19,19 +20,19 @@ const Button: ComponentStyleConfig = {
     },
   },
   variants: {
-    solid: {
-      color: 'white',
-      bg: 'brand.100',
+    solid: (props) => ({
+      color: props.colorMode === 'light' ? 'white' : 'brand.100',
+      bg: props.colorMode === 'light' ? 'brand.100' : 'whiteAlpha.800',
       _hover: {
-        bg: 'brand.100',
+        bg: props.colorMode === 'light' ? 'brand.100' : 'whiteAlpha.800',
         filter: 'brightness(80%)',
       },
-    },
-    outline: {
-      color: 'brand.100',
+    }),
+    outline: (props) => ({
+      color: props.colorMode === 'light' ? 'brand.100' : 'white',
       border: '1px solid',
-      borderColor: 'brand.100',
-    },
+      borderColor: props.colorMode === 'light' ? 'brand.100' : 'whiteAlpha.700',
+    }),
     oauth: {
       height: '34px',
       border: '1px solid',

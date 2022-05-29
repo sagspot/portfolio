@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import { categories, portfolio, testimonials, users } from './src/data';
-import { Category, Portfolio, Testimonial, User } from './src/models';
+import { portfolio, testimonials, users } from './src/data';
+import { Portfolio, Testimonial, User } from './src/models';
 
 dotenv.config({ path: __dirname + '/.env.local' });
 
@@ -21,14 +21,13 @@ const MONGODB_URI = process.env.MONGODB_URI;
 })();
 
 const importData = async () => {
-  console.log(' ⏳  Importing Data...');
-
   try {
     await User.deleteMany();
-    await Category.deleteMany();
     await Portfolio.deleteMany();
     await Testimonial.deleteMany();
     console.log(' ✔  Data destroyed. Uploading new data...');
+
+    console.log(' ⏳  Importing Data...');
 
     await User.insertMany(users);
     console.log(' ✔  Users uploaded. Uploading testimonials...');
@@ -36,18 +35,7 @@ const importData = async () => {
     await Testimonial.insertMany(testimonials);
     console.log(' ✔  Testimonials uploaded. Uploading portfolio...');
 
-    const createdCategories = await Category.insertMany(categories);
-    console.log(' ✔  Testimonials uploaded. Uploading categories...');
-
-    const selectedCategory = createdCategories[0];
-    console.log(` ✔  category <${selectedCategory.name}> selected...'`);
-
-    const samplePortfolio = portfolio.map((gig) => ({
-      ...gig,
-      category: selectedCategory._id,
-    }));
-
-    await Portfolio.insertMany(samplePortfolio);
+    await Portfolio.insertMany(portfolio);
     console.log(' ✔  Data imported successfully!');
 
     process.exit(0);
@@ -62,7 +50,6 @@ const destroyData = async () => {
 
   try {
     await User.deleteMany();
-    await Category.deleteMany();
     await Portfolio.deleteMany();
     await Testimonial.deleteMany();
 
