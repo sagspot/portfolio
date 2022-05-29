@@ -9,11 +9,11 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   {
     label: 'Home',
-    href: '#home',
+    href: '/#home',
   },
   {
     label: 'About',
-    href: '#about',
+    href: '/#about',
   },
   {
     label: 'Portfolio',
@@ -21,11 +21,11 @@ export const navItems: NavItem[] = [
   },
   {
     label: 'Testimonials',
-    href: '#testimonials',
+    href: '/#testimonials',
   },
   {
     label: 'Contact',
-    href: '#contact',
+    href: '/#contact',
   },
 ];
 

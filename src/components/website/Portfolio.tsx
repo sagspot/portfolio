@@ -24,6 +24,7 @@ const Portfolio = (props: Props) => {
   return (
     <Box
       as="section"
+      id="portfolio"
       px={[6, 8, 16]}
       py={[4, 6, 16]}
       bg={mode('blackAlpha.50', 'brand.200')}

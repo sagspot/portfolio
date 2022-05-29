@@ -48,6 +48,7 @@ const Contact = () => {
   return (
     <Box
       as="section"
+      id="contact"
       px={[6, 8, 16]}
       py={[4, 6, 16]}
       bg={useColorModeValue('blackAlpha.50', 'brand.100')}

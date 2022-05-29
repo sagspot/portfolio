@@ -18,7 +18,7 @@ import 'swiper/css/autoplay';
 const Testimonials = () => {
   const testimonials = [{}, {}, {}, {}];
   return (
-    <Box px={[6, 8, 16]} py={[4, 6, 16]}>
+    <Box as="section" id="testimonials" px={[6, 8, 16]} py={[4, 6, 16]}>
       <Heading as="h2" size="md" textAlign="center" mb={10}>
         Testimonials
       </Heading>

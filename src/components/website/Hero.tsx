@@ -15,6 +15,7 @@ const Hero = () => {
   return (
     <Flex
       as="section"
+      id="home"
       w="full"
       h="90vh"
       backgroundImage="url(forest.jpg)"
