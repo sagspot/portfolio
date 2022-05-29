@@ -32,10 +32,7 @@ const AboutText = (props: Props) => {
 
       <NextLink href="/docs/oliver-resume.pdf" download>
         <Link mt={4}>
-          <Button
-            bg={useColorModeValue('accent.100', 'accent.50')}
-            _hover={{ bg: 'accent.50' }}
-          >
+          <Button bg="accent.100" _hover={{ bg: 'accent.50' }}>
             <Icon as={GoFilePdf} mr={2} boxSize={4} />
             Download my Resume
           </Button>

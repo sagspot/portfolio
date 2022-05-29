@@ -56,8 +56,8 @@ const portfolio = [
     category: 'website',
     img: '/images/254hope.webp',
     url: 'http://254hope.org/',
-    desc: 'Custom worpress theme',
-    stacks: [{ name: 'Custom worpress theme' }],
+    desc: 'Custom wordpress theme',
+    stacks: [{ name: 'Custom wordpress theme' }],
   },
   {
     title: 'Reusable login API',
@@ -78,7 +78,7 @@ const portfolio = [
     stacks: [{ name: 'React' }, { name: 'Redux' }],
   },
   {
-    title: 'Kenya Administation API',
+    title: 'Kenya Administration API',
     category: 'api',
     img: '/images/kenya-flag.webp',
     url: 'https://kenya-administation.herokuapp.com/',
@@ -91,15 +91,15 @@ const portfolio = [
     category: 'website',
     img: '/images/spread-marketing.webp',
     url: 'https://spreadmarketing.netlify.app/',
-    desc: 'Custom worpress theme',
-    stacks: [{ name: 'Custom worpress theme' }],
+    desc: 'Custom wordpress theme',
+    stacks: [{ name: 'Custom wordpress theme' }],
   },
   {
     title: 'Abacus Kenya',
     category: 'website',
     img: '/images/abacus.webp',
     url: 'https://abacus-home.netlify.app/',
-    desc: 'Custom worpress theme',
+    desc: 'Custom wordpress theme',
     stacks: [{ name: 'Custom worpress theme' }],
   },
   {
