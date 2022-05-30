@@ -5,10 +5,9 @@ declare namespace NodeJS {
     NEXTAUTH_URL: string;
     NEXTAUTH_SECRET: string;
 
-    EMAIL_SERVER_USER: string;
-    EMAIL_SERVER_PASSWORD: string;
-    EMAIL_SERVER_HOST: string;
-    EMAIL_SERVER_PORT: number;
-    EMAIL_FROM: string;
+    AWS_BUCKET: string;
+    AWS_ACCESS_KEY_ID: string;
+    AWS_SECRET_ACCESS_KEY: string;
+    AWS_REGION: string;
   }
 }

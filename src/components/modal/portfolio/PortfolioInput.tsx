@@ -1,11 +1,4 @@
-import {
-  Button,
-  Flex,
-  GridItem,
-  Input,
-  Select,
-  SimpleGrid,
-} from '@chakra-ui/react';
+import { Select, SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
 import InputItem from '../../Helpers/InputItem';
 import { PortfolioValues } from './PortfolioModal';

@@ -12,20 +12,13 @@ import { FiImage } from 'react-icons/fi';
 import { HiOutlineDocumentText } from 'react-icons/hi';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { modalToggled } from '../../../features/modals/portfolioModalSlice';
-import sendRequest from '../../../lib/requests';
 import ImageInput from './ImageInput';
 import TabItem from './TabItem';
 import TextInputs from './TextInputs';
 
 const formTabs: TabItem[] = [
-  {
-    label: 'Text',
-    icon: HiOutlineDocumentText,
-  },
-  {
-    label: 'Image',
-    icon: FiImage,
-  },
+  { label: 'Text', icon: HiOutlineDocumentText },
+  { label: 'Image', icon: FiImage },
 ];
 
 export interface TabItem {
@@ -39,7 +32,6 @@ export interface PortfolioValues {
   source: string;
   url: string;
   desc: string;
-  img?: string;
 }
 
 const initialValueState: PortfolioValues = {
@@ -48,7 +40,6 @@ const initialValueState: PortfolioValues = {
   source: '',
   url: '',
   desc: '',
-  img: '',
 };
 
 const PortfolioModal = () => {
@@ -57,26 +48,41 @@ const PortfolioModal = () => {
   const [sending, setSending] = React.useState(false);
   const [error, setError] = React.useState('');
   const [selectedTab, setSelectedTab] = React.useState(formTabs[0].label);
-  const [values, setValues] =
-    React.useState<PortfolioValues>(initialValueState);
+  const [values, setValues] = React.useState(initialValueState);
+  const [image, setImage] = React.useState<File | null>(null);
 
   const submitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     if (!values.title) return setError('Title is required');
     if (!values.category) return setError('Category is required');
     if (!values.url) return setError('Live url is required');
     if (!values.desc) return setError('Description is required');
-    if (!values.img) return setError('Please upload an image');
+    if (!image) return setError('Please upload an image');
+
+    const formData = new FormData();
+
+    if (!!values.title) formData.append('title', values.title);
+    if (!!values.category) formData.append('category', values.category);
+    if (!!values.source) formData.append('source', values.source);
+    if (!!values.url) formData.append('url', values.url);
+    if (!!values.desc) formData.append('desc', values.desc);
+    if (!!image) formData.append('img', image);
 
     setSending(true);
     setError('');
 
     try {
-      const res = await sendRequest('/api/portfolio', {
+      const response = await fetch('/api/portfolio', {
         method: 'POST',
-        body: values,
+        body: formData,
       });
-      console.log(res);
+
+      if (!response.ok) throw new Error(response.statusText);
+
+      const data = await response.json();
+
+      console.log(data);
       setValues(initialValueState);
     } catch (error) {
       setError(error.message);
@@ -112,11 +118,7 @@ const PortfolioModal = () => {
           />
         )}
         {selectedTab === 'Image' && (
-          <ImageInput
-            setSelectedTab={setSelectedTab}
-            values={values}
-            setValues={setValues}
-          />
+          <ImageInput setSelectedTab={setSelectedTab} setImage={setImage} />
         )}
       </ModalContent>
     </Modal>
