@@ -8,16 +8,14 @@ import {
 } from '@chakra-ui/react';
 import { signIn } from 'next-auth/react';
 import React from 'react';
-import { useAppDispatch } from '../../../../../app/hooks';
+import { useAppDispatch } from '../../../app/hooks';
 import {
   modalClosed,
   modalOpened,
-} from '../../../../../features/modals/authModalSlice';
-import InputItem from './InputItem';
+} from '../../../features/modals/authModalSlice';
+import InputItem from '../../Helpers/InputItem';
 
-type Props = {};
-
-const SignIn = (props: Props) => {
+const SignIn = () => {
   const dispatch = useAppDispatch();
   const [error, setError] = React.useState('');
   const [loading, setLoading] = React.useState(false);

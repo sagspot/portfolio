@@ -7,13 +7,11 @@ import {
   ModalBody,
 } from '@chakra-ui/react';
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../../app/hooks';
-import { modalClosed } from '../../../../../features/modals/authModalSlice';
+import { useAppDispatch, useAppSelector } from '../../../app/hooks';
+import { modalClosed } from '../../../features/modals/authModalSlice';
 import AuthInputs from './AuthInputs';
 
-type Props = {};
-
-const AuthModal = (props: Props) => {
+const AuthModal = () => {
   const dispatch = useAppDispatch();
   const { open, view } = useAppSelector((state) => state.authModal);
   return (

@@ -17,16 +17,18 @@ import {
 import storage from 'redux-persist/lib/storage';
 //   import userSlice from '../features/auth/userSlice';
 import authModalSlice from '../features/modals/authModalSlice';
+import portfolioModalSlice from '../features/modals/portfolioModalSlice';
 
 const persistConfig = {
   key: 'sagspot',
   version: 1,
   storage,
-  blacklist: ['authModal'],
+  blacklist: ['authModal', 'portfolioModal'],
 };
 
 const rootReducer = combineReducers({
   authModal: authModalSlice,
+  portfolioModal: portfolioModalSlice,
   // user: userSlice,
 });
 

@@ -7,7 +7,7 @@ const initialState: AuthModalType = {
 };
 
 const authModalSlice = createSlice({
-  name: 'authModal',
+  name: 'portfolioModal',
   initialState,
   reducers: {
     modalOpened: (

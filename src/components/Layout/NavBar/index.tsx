@@ -1,12 +1,10 @@
 import {
   Box,
   Flex,
-  Text,
   IconButton,
   Button,
   Stack,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   useColorMode,
 } from '@chakra-ui/react';

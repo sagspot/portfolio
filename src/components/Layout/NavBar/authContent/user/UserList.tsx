@@ -3,11 +3,13 @@ import { signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { VscDashboard } from 'react-icons/vsc';
-import { GiCargoCrate } from 'react-icons/gi';
-import { MdOutlineLogin } from 'react-icons/md';
+import { MdOutlineLogin, MdWorkOutline } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
+import { useAppDispatch } from '../../../../../app/hooks';
+import { modalToggled } from '../../../../../features/modals/portfolioModalSlice';
 
 const UserList = () => {
+  const dispatch = useAppDispatch();
   const router = useRouter();
   return (
     <MenuList>
@@ -29,11 +31,11 @@ const UserList = () => {
         fontSize="10pt"
         fontWeight={700}
         _hover={{ bg: 'brand.100', color: 'white' }}
-        onClick={() => router.push('/account/cargo/history')}
+        onClick={() => dispatch(modalToggled(true))}
       >
         <Flex alignItems="center">
-          <Icon fontSize={20} mr={2} as={GiCargoCrate} />
-          Cargo History
+          <Icon fontSize={20} mr={2} as={MdWorkOutline} />
+          Add Portfolio
         </Flex>
       </MenuItem>
 

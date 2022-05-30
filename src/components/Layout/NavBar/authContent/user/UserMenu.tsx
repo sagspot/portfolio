@@ -41,13 +41,8 @@ const UserMenu = () => {
             mr={8}
           >
             <Text as="span" fontWeight={700}>
-              {user?.name || user?.email?.split('@')[0]}
+              {name}
             </Text>
-            <Flex alignItems="center">
-              <Text as="span" color="gray.400">
-                {user?.role || 'guest'}
-              </Text>
-            </Flex>
           </Box>
 
           <Icon as={ChevronDownIcon} />

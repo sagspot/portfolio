@@ -1,15 +1,13 @@
-import { Flex, Icon, Input, Button, Text, VStack } from '@chakra-ui/react';
-import error from 'next/error';
+import { Flex, Icon,  Button, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
-import { BsReddit, BsDot } from 'react-icons/bs';
-import { useAppDispatch } from '../../../../../app/hooks';
-import { modalOpened } from '../../../../../features/modals/authModalSlice';
-import sendRequest from '../../../../../lib/requests';
-import InputItem from './InputItem';
+import { BsReddit } from 'react-icons/bs';
+import { useAppDispatch } from '../../../app/hooks';
+import { modalOpened } from '../../../features/modals/authModalSlice';
+import sendRequest from '../../../lib/requests';
+import InputItem from '../../Helpers/InputItem';
 
-type Props = {};
 
-const ResetPassword = (props: Props) => {
+const ResetPassword = () => {
   const dispatch = useAppDispatch();
   const [error, setError] = React.useState('');
   const [loading, setLoading] = React.useState(false);
