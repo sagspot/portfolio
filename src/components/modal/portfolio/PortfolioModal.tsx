@@ -67,7 +67,7 @@ const PortfolioModal = () => {
     if (!!values.source) formData.append('source', values.source);
     if (!!values.url) formData.append('url', values.url);
     if (!!values.desc) formData.append('desc', values.desc);
-    if (!!image) formData.append('img', image);
+    if (!!image) formData.append('image', image);
 
     setSending(true);
     setError('');
@@ -84,6 +84,7 @@ const PortfolioModal = () => {
 
       console.log(data);
       setValues(initialValueState);
+      setImage(null);
     } catch (error) {
       setError(error.message);
     } finally {

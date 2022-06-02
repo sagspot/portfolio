@@ -1,15 +1,17 @@
+import fs from 'fs';
 import AWS from 'aws-sdk';
 import formidable from 'formidable-serverless';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { PortfolioValues } from '../../../components/modal/portfolio/PortfolioModal';
 import connectDB from '../../../lib/connectDB';
+import { Portfolio } from '../../../models';
 
 export interface ImageType extends File {
   path: string;
 }
 
 export interface FormFiles {
-  img: ImageType;
+  image: ImageType;
 }
 
 export interface FormPromise {
@@ -25,10 +27,10 @@ export const config = {
 
 const s3 = new AWS.S3({
   //   credentials: {
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.SAGSPOT_AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.SAGSPOT_AWS_SECRET_ACCESS_KEY,
   //   },
-  region: process.env.AWS_REGION,
+  region: process.env.SAGSPOT_AWS_REGION,
 });
 
 export default async function handler(
@@ -52,13 +54,17 @@ export default async function handler(
       try {
         const { fields, files } = await data;
 
-        const fileName = `${Date.now()}-${files?.img.name}`;
+        const fileName = `${Date.now()}-${files?.image.name}`;
 
-        const s3Data = await uploadImage(fileName, files?.img.path);
-        res.status(200).json({ fields, s3Data });
+        await Portfolio.create({
+          ...fields,
+          img: await uploadImage(fileName, files?.image.path),
+        });
+
+        res.status(200).json({ message: 'Portfolio added successfully' });
       } catch (error) {
         console.error(error);
-        return res.status(500).json({ error: error.message });
+        return res.status(500).json({ message: error.message });
       }
 
       break;
@@ -72,11 +78,18 @@ export default async function handler(
 }
 
 const uploadImage = async (fileName: string, file: string) => {
-  const params = { Bucket: process.env.AWS_BUCKET, Key: fileName };
+  const params = { Bucket: process.env.SAGSPOT_AWS_BUCKET, Key: fileName };
 
-  const data = await s3.upload({ ...params, Body: file }).promise();
+  try {
+    const { Location } = await s3
+      .upload({ ...params, Body: fs.readFileSync(file) })
+      .promise();
 
-  const url = s3.getSignedUrl('getObject', params);
+    // const url = s3.getSignedUrl('getObject', params);
 
-  return { data, url };
+    return Location;
+  } catch (error) {
+    console.error(error);
+    throw new Error(error);
+  }
 };
