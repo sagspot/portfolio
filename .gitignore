@@ -32,4 +32,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-.vercel
+# sitemap
+robots.txt
+public/sitemap*
