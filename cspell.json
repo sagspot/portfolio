@@ -1,0 +1,24 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "chakra",
+    "semibold",
+    "signin",
+    "signup",
+    "Formik",
+    "mpesa",
+    "persistor",
+    "nextauth",
+    "Swiper",
+    "postbuild",
+    "nextjs",
+    "progressbar",
+    "pageview",
+    "gtag"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
