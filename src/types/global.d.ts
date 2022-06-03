@@ -6,4 +6,7 @@ declare global {
       mongoose: Connection;
     }
   }
+  interface Window {
+    dataLayer: any;
+  }
 }

@@ -9,5 +9,7 @@ declare namespace NodeJS {
     SAGSPOT_AWS_ACCESS_KEY_ID: string;
     SAGSPOT_AWS_SECRET_ACCESS_KEY: string;
     SAGSPOT_AWS_REGION: string;
+
+    NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID: string;
   }
 }

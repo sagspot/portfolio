@@ -15,7 +15,9 @@
     "Swiper",
     "postbuild",
     "nextjs",
-    "progressbar"
+    "progressbar",
+    "pageview",
+    "gtag"
   ],
   "ignoreWords": [],
   "import": []
