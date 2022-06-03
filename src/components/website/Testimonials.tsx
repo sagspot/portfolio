@@ -24,7 +24,6 @@ const Testimonials = ({ data }: { data: TestimonialType[] }) => {
       <Swiper
         tag="section"
         modules={[Autoplay]}
-        spaceBetween={30}
         slidesPerView={1}
         speed={600}
         loop={true}
@@ -58,6 +57,7 @@ const Testimonials = ({ data }: { data: TestimonialType[] }) => {
                 overflow="hidden"
                 border="2px solid"
                 borderColor={mode('red.50', 'brand.200')}
+                bg={mode('red.50', 'brand.200')}
               >
                 <Image
                   src={testimonial.img}

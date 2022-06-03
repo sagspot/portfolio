@@ -5,6 +5,7 @@ import {
   Heading,
   Icon,
   Link,
+  Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
@@ -46,21 +47,22 @@ const Card = ({ content, href, icon }: Props) => {
 
 const Contact = () => {
   return (
-    <Box
+    <Stack
       as="section"
       id="contact"
       px={[6, 8, 16]}
       py={[4, 6, 16]}
       bg={useColorModeValue('blackAlpha.50', 'blue.800')}
+      spacing={6}
     >
       <Heading as="h2" size="md" textAlign="center">
         Contact Me
       </Heading>
 
-      <Flex
+      <Stack
+        direction={['column', 'row']}
         justifyContent="space-evenly"
         alignItems="center"
-        flexDirection={['column', 'row']}
       >
         <Card
           content="+254 703 215 696"
@@ -72,8 +74,8 @@ const Contact = () => {
           href="mailto:hello@sagspot.co.ke"
           icon={MdMarkEmailUnread}
         />
-      </Flex>
-    </Box>
+      </Stack>
+    </Stack>
   );
 };
 
