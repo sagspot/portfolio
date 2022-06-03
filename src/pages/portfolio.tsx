@@ -26,5 +26,5 @@ export async function getStaticProps() {
 
   const portfolioData = JSON.parse(JSON.stringify(portfolioRes));
 
-  return { props: { portfolioData } };
+  return { props: { portfolioData }, revalidate: 1 };
 }

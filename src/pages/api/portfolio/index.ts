@@ -82,9 +82,10 @@ const uploadImage = async (fileName: string, file: string) => {
 
   try {
     const { Location } = await s3
-      .upload({ ...params, Body: fs.readFileSync(file) })
-      .promise();
-
+    .upload({ ...params, Body: fs.readFileSync(file) })
+    .promise();
+    
+    // .upload({ ...params, Body: fs.createReadStream(file) })
     // const url = s3.getSignedUrl('getObject', params);
 
     return Location;

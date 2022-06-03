@@ -22,14 +22,33 @@ const PortfolioInput = ({ changeHandler, values }: Props) => {
         value={values.title}
       />
 
+      <InputItem
+        name="desc"
+        placeholder="Description / Stacks"
+        type="text"
+        mb={2}
+        onChange={changeHandler}
+        value={values.desc}
+      />
+
       <Select
         name="category"
         placeholder="Category"
         onChange={changeHandler}
-        defaultValue={values.category}
+        value={values.category}
       >
         <option value="api">Api</option>
         <option value="website">Website</option>
+      </Select>
+
+      <Select
+        name="isFeatured"
+        placeholder="Featured?"
+        onChange={changeHandler}
+        value={values.isFeatured}
+      >
+        <option value="true">Yes</option>
+        <option value="false">No</option>
       </Select>
 
       <InputItem
@@ -48,15 +67,6 @@ const PortfolioInput = ({ changeHandler, values }: Props) => {
         mb={2}
         onChange={changeHandler}
         value={values.url}
-      />
-
-      <InputItem
-        name="desc"
-        placeholder="Description / Stacks"
-        type="text"
-        mb={2}
-        onChange={changeHandler}
-        value={values.desc}
       />
     </SimpleGrid>
   );

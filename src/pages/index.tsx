@@ -28,16 +28,7 @@ export default function Homepage(props: Props) {
 export async function getStaticProps() {
   await connectDB();
 
-  const options = {
-    title: 1,
-    img: 1,
-    desc: 1,
-    source: 1,
-    url: 1,
-    createdAt: 1,
-  };
-
-  const portfolioRes = await Portfolio.find({}, options)
+  const portfolioRes = await Portfolio.find({ isFeatured: true })
     .sort({ createdAt: -1 })
     .limit(3);
 
@@ -45,5 +36,5 @@ export async function getStaticProps() {
 
   const portfolioData = JSON.parse(JSON.stringify(portfolioRes));
   const testimonialData = JSON.parse(JSON.stringify(testimonialRes));
-  return { props: { portfolioData, testimonialData } };
+  return { props: { portfolioData, testimonialData }, revalidate: 1 };
 }

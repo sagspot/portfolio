@@ -2,7 +2,7 @@ import { Box, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 
-const ImageBox = ({ img }: { img: string }) => {
+const ImageBox = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <Box
       w="80%"
@@ -11,6 +11,7 @@ const ImageBox = ({ img }: { img: string }) => {
       rounded="base"
       border="8px solid"
       borderColor={useColorModeValue('gray.50', 'blue.700')}
+      bg={useColorModeValue('gray.50', 'blue.700')}
       overflow="hidden"
       shadow="0 0 8px 1px rgba(0,0,0,0.25)"
       transition="all .15s ease-in-out"
@@ -26,8 +27,8 @@ const ImageBox = ({ img }: { img: string }) => {
         _groupHover={{ transform: 'scale(1.05)' }}
       >
         <Image
-          src={img}
-          alt="ps"
+          src={src || '/no-image.jpg'}
+          alt={alt || 'Project Image'}
           objectFit="cover"
           layout="fill"
           draggable={false}

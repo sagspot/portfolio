@@ -32,6 +32,7 @@ export interface PortfolioValues {
   source: string;
   url: string;
   desc: string;
+  isFeatured: string;
 }
 
 const initialValueState: PortfolioValues = {
@@ -40,6 +41,7 @@ const initialValueState: PortfolioValues = {
   source: '',
   url: '',
   desc: '',
+  isFeatured: '',
 };
 
 const PortfolioModal = () => {
@@ -58,6 +60,7 @@ const PortfolioModal = () => {
     if (!values.category) return setError('Category is required');
     if (!values.url) return setError('Live url is required');
     if (!values.desc) return setError('Description is required');
+    if (!values.isFeatured) return setError('Specify if it is featured');
     if (!image) return setError('Please upload an image');
 
     const formData = new FormData();
@@ -67,6 +70,7 @@ const PortfolioModal = () => {
     if (!!values.source) formData.append('source', values.source);
     if (!!values.url) formData.append('url', values.url);
     if (!!values.desc) formData.append('desc', values.desc);
+    if (!!values.isFeatured) formData.append('isFeatured', values.isFeatured);
     if (!!image) formData.append('image', image);
 
     setSending(true);
@@ -80,9 +84,9 @@ const PortfolioModal = () => {
 
       if (!response.ok) throw new Error(response.statusText);
 
-      const data = await response.json();
+      await response.json();
 
-      console.log(data);
+      dispatch(modalToggled());
       setValues(initialValueState);
       setImage(null);
     } catch (error) {
