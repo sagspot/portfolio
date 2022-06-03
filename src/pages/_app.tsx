@@ -5,8 +5,10 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import NextNProgress from 'nextjs-progressbar';
 import { AnimatePresence } from 'framer-motion';
+import { DefaultSeo } from 'next-seo';
 import store, { persistor } from '../app/store';
 import theme from '../theme';
+import SEO from '../../next-seo.config';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
         <PersistGate loading={null} persistor={persistor}>
           <ChakraProvider theme={theme}>
             <NextNProgress color="#161612" />
+            <DefaultSeo {...SEO} />
             <AnimatePresence exitBeforeEnter>
               <Component {...pageProps} />
             </AnimatePresence>
