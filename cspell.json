@@ -12,7 +12,10 @@
     "mpesa",
     "persistor",
     "nextauth",
-    "Swiper"
+    "Swiper",
+    "postbuild",
+    "nextjs",
+    "progressbar"
   ],
   "ignoreWords": [],
   "import": []

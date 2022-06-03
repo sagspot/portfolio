@@ -3,20 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev:sass": "sass src/sass:dist --watch --style=compressed",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "postbuild": "next-sitemap --config sitemap.config.js",
     "data:import": "ts-node --project tsconfig.seeder.json seeder.ts",
     "data:destroy": "ts-node --project tsconfig.seeder.json seeder.ts -d"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sagspot/portfolio.git"
+    "url": "https://github.com/sagspot/portfolio.git"
   },
   "author": "Oliver Sagala",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sagspot/portfolio/issues"
   },
@@ -35,6 +35,8 @@
     "mongoose": "^6.3.4",
     "next": "^12.1.6",
     "next-auth": "^4.3.4",
+    "next-seo": "^5.4.0",
+    "next-sitemap": "^3.0.3",
     "nextjs-progressbar": "^0.0.14",
     "nodemailer": "^6.7.5",
     "react": "^18.1.0",
