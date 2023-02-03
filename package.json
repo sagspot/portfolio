@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config sitemap.config.js",
-    "data:import": "ts-node --project tsconfig.seeder.json seeder.ts",
-    "data:destroy": "ts-node --project tsconfig.seeder.json seeder.ts -d"
+    "postbuild": "next-sitemap --config sitemap.config.js"
   },
   "repository": {
     "type": "git",
