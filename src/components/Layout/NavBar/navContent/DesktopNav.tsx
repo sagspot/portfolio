@@ -1,6 +1,5 @@
-import { useColorModeValue, Stack, Box, Link, Flex } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import React from 'react';
+import { Box, Flex, Stack, Text, useColorModeValue } from '@chakra-ui/react';
+import Link from 'next/link';
 import { navItems } from '../../../../data/nav';
 
 const DesktopNav = () => {
@@ -11,21 +10,21 @@ const DesktopNav = () => {
       <Stack direction={'row'} spacing={4}>
         {navItems.map((navItem) => (
           <Box key={navItem.label}>
-            <NextLink href={navItem.href} passHref>
-              <Link
-                p={2}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={linkColor}
-                textTransform="uppercase"
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </NextLink>
+            <Text
+              as={Link}
+              href={navItem.href}
+              p={2}
+              fontSize={'sm'}
+              fontWeight={500}
+              color={linkColor}
+              textTransform="uppercase"
+              _hover={{
+                textDecoration: 'none',
+                color: linkHoverColor,
+              }}
+            >
+              {navItem.label}
+            </Text>
           </Box>
         ))}
       </Stack>
