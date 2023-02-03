@@ -9,13 +9,15 @@ export default async function handler(
   switch (method) {
     case 'POST':
       try {
-        res.status(200).json({ message: 'Reset password', body });
+        if (req.headers['x-validation-secret'] !== process.env.REVALIDATE_TOKEN)
+          return res.status(401).json({ message: 'Invalid token' });
+
+        await res.revalidate('/');
+        return res.json({ revalidated: true });
       } catch (error) {
         console.error(error);
         return res.status(500).json({ error: error.message });
       }
-
-      break;
 
     default:
       res
