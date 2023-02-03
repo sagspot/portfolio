@@ -1,14 +1,5 @@
-import {
-  Button,
-  Flex,
-  Heading,
-  Icon,
-  Link,
-  Text,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Icon, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import React from 'react';
 import { GoFilePdf } from 'react-icons/go';
 
 type Props = {};
@@ -30,14 +21,19 @@ const AboutText = (props: Props) => {
         life easier
       </Text>
 
-      <NextLink href="/docs/oliver-resume.pdf" download>
-        <Link mt={4}>
-          <Button bg="accent.100" _hover={{ bg: 'accent.50' }}>
-            <Icon as={GoFilePdf} mr={2} boxSize={4} />
-            Download my Resume
-          </Button>
-        </Link>
-      </NextLink>
+      <Box>
+        <Button
+          as={NextLink}
+          href="/docs/oliver-resume.pdf"
+          mt={4}
+          bg="accent.100"
+          _hover={{ bg: 'accent.50' }}
+          download
+        >
+          <Icon as={GoFilePdf} mr={2} boxSize={4} />
+          Download my Resume
+        </Button>
+      </Box>
     </Flex>
   );
 };
