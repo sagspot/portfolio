@@ -1,13 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import connectDB from '../../../lib/connectDB';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   const { body, method } = req;
-
-  await connectDB();
 
   switch (method) {
     case 'POST':

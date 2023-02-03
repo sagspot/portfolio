@@ -28,6 +28,8 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@reduxjs/toolkit": "^1.8.1",
+    "@sanity/client": "^4.0.1",
+    "@sanity/image-url": "^1.0.2",
     "aws-sdk": "^2.1145.0",
     "bcrypt": "^5.0.1",
     "formidable-serverless": "^1.1.1",

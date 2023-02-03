@@ -1,20 +1,15 @@
 import {
   Box,
-  Button,
   Flex,
   Heading,
-  Icon,
-  Link,
   SimpleGrid,
   useColorModeValue as mode,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import React from 'react';
-import { CgMoreO } from 'react-icons/cg';
-import { PortfolioType } from '../../types';
-import PortfolioCard from './portfolioPage/PortfolioCard';
+import { Portfolio } from '../../types';
+import Content from './portfolioPage/Content';
+import ImageBox from './portfolioPage/ImageBox';
 
-const Portfolio = ({ data }: { data: PortfolioType[] }) => {
+const Portfolio = ({ data }: { data: Portfolio[] }) => {
   return (
     <Box
       as="section"
@@ -29,22 +24,27 @@ const Portfolio = ({ data }: { data: PortfolioType[] }) => {
 
       <SimpleGrid columns={[1, 2, 3]} spacing={10} mt={8}>
         {data.map((project) => (
-          <PortfolioCard project={project} key={project._id} />
+          <Flex justify="center" align="center" key={project._id}>
+            <Flex
+              direction="column"
+              align="center"
+              p={6}
+              mt={16}
+              rounded="base"
+              shadow="0 0 8px 1px rgba(0,0,0,0.25)"
+              bg={mode('white', 'blue.700')}
+              role="group"
+              maxWidth={['100%', '352px']}
+              w="100%"
+            >
+              {/* src={urlFor(item)} */}
+              <ImageBox src={project.mainImage} alt={project.title} />
+
+              <Content {...project} />
+            </Flex>
+          </Flex>
         ))}
       </SimpleGrid>
-
-      <NextLink href="/portfolio" passHref>
-        <Flex
-          as={Link}
-          justify="center"
-          mt={8}
-          _hover={{ textDecoration: 'none' }}
-        >
-          <Button bg="accent.100" _hover={{ bg: 'accent.50' }}>
-            <Icon as={CgMoreO} mr={2} /> View All
-          </Button>
-        </Flex>
-      </NextLink>
     </Box>
   );
 };
