@@ -1,18 +1,16 @@
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
   Box,
+  Button,
   Flex,
   IconButton,
-  Button,
-  Stack,
+  useColorMode,
   useColorModeValue,
   useDisclosure,
-  useColorMode,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import Image from 'next/image';
 import DesktopNav from './navContent/DesktopNav';
 import MobileNav from './navContent/MobileNav';
-import AuthContent from './authContent';
-import Image from 'next/image';
 
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -63,18 +61,9 @@ const NavBar = () => {
           <DesktopNav />
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={0}
-        >
-          <Button onClick={toggleColorMode} variant="ghost">
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-          </Button>
-
-          <AuthContent />
-        </Stack>
+        <Button onClick={toggleColorMode} variant="ghost">
+          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        </Button>
       </Flex>
 
       <MobileNav isOpen={isOpen} />

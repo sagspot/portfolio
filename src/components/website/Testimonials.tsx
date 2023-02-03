@@ -7,14 +7,13 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
-import React from 'react';
-import { TestimonialType } from '../../types';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Testimonial } from '../../types';
 
-const Testimonials = ({ data }: { data: TestimonialType[] }) => {
+const Testimonials = ({ data }: { data: Testimonial[] }) => {
   return (
     <Box as="section" id="testimonials" px={[6, 8, 16]} py={[4, 6, 16]}>
       <Heading as="h2" size="md" textAlign="center" mb={10}>
@@ -60,7 +59,7 @@ const Testimonials = ({ data }: { data: TestimonialType[] }) => {
                 bg={mode('red.50', 'brand.200')}
               >
                 <Image
-                  src={testimonial.img}
+                  src={testimonial.avatar}
                   alt=""
                   layout="fill"
                   objectFit="cover"
@@ -73,7 +72,7 @@ const Testimonials = ({ data }: { data: TestimonialType[] }) => {
                 </Heading>
 
                 <Text width={['90%', null, '80%']} mx="auto">
-                  {testimonial.desc}
+                  {testimonial.text}
                 </Text>
               </Box>
             </Flex>

@@ -14,3 +14,19 @@ export interface TestimonialType {
   img: string;
   desc: string;
 }
+
+export interface Portfolio {
+  _id: string;
+  title: string;
+  description: string;
+  github: string;
+  previewUrl: string;
+  mainImage: string;
+}
+
+export interface Testimonial {
+  _id: string;
+  name: string;
+  text: string;
+  avatar: string;
+}

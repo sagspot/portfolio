@@ -4,7 +4,7 @@
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ['sagspot.s3.eu-central-1.amazonaws.com'],
+    domains: ['cdn.sanity.io'],
   },
 };
 
