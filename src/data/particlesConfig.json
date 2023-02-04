@@ -6,9 +6,14 @@
   },
   "fullScreen": {
     "zIndex": 0,
-    "enabled": false
+    "enabled": false,
+    "position": "absolute"
   },
   "fpsLimit": 120,
+  "interactivity": {
+    "resize": true,
+    "detectsOn": "canvas"
+  },
   "particles": {
     "color": {
       "value": "#ffffff"

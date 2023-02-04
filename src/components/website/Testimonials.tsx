@@ -1,10 +1,13 @@
 import {
   Box,
+  Card,
+  CardBody,
   Circle,
   Flex,
   Heading,
   Text,
   useColorModeValue as mode,
+  VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { Autoplay } from 'swiper';
@@ -48,33 +51,43 @@ const Testimonials = ({ data }: { data: Testimonial[] }) => {
               align="center"
               textAlign="center"
               rounded="base"
+              isolation="isolate"
             >
               <Circle
-                size={20}
-                mb="-12"
+                size={28}
+                mb={-16}
                 position="relative"
                 overflow="hidden"
                 border="2px solid"
                 borderColor={mode('red.50', 'brand.200')}
+                shadow="lg"
                 bg={mode('red.50', 'brand.200')}
               >
                 <Image
                   src={testimonial.avatar}
-                  alt=""
-                  layout="fill"
-                  objectFit="cover"
+                  alt={testimonial.name}
+                  fill
+                  style={{ objectFit: 'cover' }}
                 />
               </Circle>
 
-              <Box pt={16} pb={8} bg={mode('red.100', 'blue.700')}>
-                <Heading as="h3" size="sm">
-                  {testimonial.name}
-                </Heading>
+              <Card
+                pt={16}
+                rounded="xl"
+                shadow="lg"
+                bg={mode('red.100', 'blue.700')}
+                zIndex={-1}
+              >
+                <CardBody as={VStack}>
+                  <Heading as="h3" size="sm">
+                    {testimonial.name}
+                  </Heading>
 
-                <Text width={['90%', null, '80%']} mx="auto">
-                  {testimonial.text}
-                </Text>
-              </Box>
+                  <Text width={['90%', null, '80%']} mx="auto">
+                    {testimonial.text}
+                  </Text>
+                </CardBody>
+              </Card>
             </Flex>
           </SwiperSlide>
         ))}

@@ -1,16 +1,17 @@
 import {
-  Box,
+  Card,
+  CardBody,
   Circle,
-  Flex,
   Heading,
+  HStack,
   Icon,
   Link,
   Stack,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import React from 'react';
-import { MdMarkEmailUnread } from 'react-icons/md';
 import { BsTelephoneOutboundFill } from 'react-icons/bs';
+import { MdMarkEmailUnread } from 'react-icons/md';
 
 interface Props {
   content: string;
@@ -18,30 +19,25 @@ interface Props {
   icon: any;
 }
 
-const Card = ({ content, href, icon }: Props) => {
+const ContactCard = ({ content, href, icon }: Props) => {
   return (
-    <Link
+    <Card
+      as={Link}
       href={href}
       isExternal
+      bg={useColorModeValue('red.100', 'blue.700')}
       _hover={{
         textDecoration: 'none',
         shadow: '0 2px 7px 4px rgba(0, 0, 0, 0.1)',
       }}
     >
-      <Flex
-        justify="center"
-        align="center"
-        px={4}
-        py={2}
-        bg={useColorModeValue('red.100', 'blue.700')}
-        rounded="base"
-      >
+      <CardBody as={HStack}>
         <Circle size={12} mr={2} color="white" bg="accent.100">
           <Icon as={icon} boxSize={5} />
         </Circle>
-        {content}
-      </Flex>
-    </Link>
+        <Text>{content}</Text>
+      </CardBody>
+    </Card>
   );
 };
 
@@ -64,12 +60,12 @@ const Contact = () => {
         justifyContent="space-evenly"
         alignItems="center"
       >
-        <Card
+        <ContactCard
           content="+254 703 215 696"
           href="tel:+254703215696"
           icon={BsTelephoneOutboundFill}
         />
-        <Card
+        <ContactCard
           content="hello@sagspot.co.ke"
           href="mailto:hello@sagspot.co.ke"
           icon={MdMarkEmailUnread}
