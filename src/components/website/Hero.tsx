@@ -1,26 +1,26 @@
 import {
-  Flex,
-  VStack,
-  useBreakpointValue,
-  Stack,
-  Button,
-  Text,
-  useColorModeValue,
   Box,
+  Button,
+  Flex,
+  Stack,
+  Text,
+  useBreakpointValue,
+  useColorModeValue,
+  VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import React from 'react';
-// import Particles from 'react-tsparticles';
-// import { loadFull } from 'tsparticles';
-// import type { Engine } from 'tsparticles-engine';
-// import { ISourceOptions } from 'tsparticles-engine';
-// import particlesConfig from '../../data/particlesConfig.json';
-// import styles from './Particles.module.css';
+import { useCallback } from 'react';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import type { Engine } from 'tsparticles-engine';
+import { ISourceOptions } from 'tsparticles-engine';
+import particlesConfig from '../../data/particlesConfig.json';
+import styles from './Particles.module.css';
 
 const Hero = () => {
-  // const particlesInit = React.useCallback((engine: Engine) => {
-  //   loadFull(engine);
-  // }, []);
+  const particlesInit = useCallback(async (engine: Engine) => {
+    loadFull(engine);
+  }, []);
 
   // tsParticles.load(particlesInit);
 
@@ -37,11 +37,11 @@ const Hero = () => {
       backgroundRepeat="no-repeat"
       position="relative"
     >
-      {/* <Particles
-        id={styles.particles}
+      <Particles
+        className={styles.particles}
         options={particlesConfig as ISourceOptions}
         init={particlesInit}
-      /> */}
+      />
 
       <VStack
         w="full"
@@ -62,8 +62,8 @@ const Hero = () => {
             <Image
               src="/sagala.jpg"
               alt="Oliver Sagala portrait"
-              layout="fill"
-              objectFit="contain"
+              fill
+              style={{ objectFit: 'contain' }}
             />
           </Box>
           <Text
