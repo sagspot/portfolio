@@ -10,13 +10,14 @@ import { Portfolio, Testimonial } from '../types';
 interface Props {
   projects: Portfolio[];
   testimonials: Testimonial[];
+  resume: { resume: string };
 }
 
 export default function Homepage(props: Props) {
   return (
     <Layout>
       <Hero />
-      <About />
+      <About resume={props.resume.resume} />
       <PortfolioComp data={props.projects} />
       <Testimonials data={props.testimonials} />
       <Contact />
@@ -39,12 +40,16 @@ export async function getStaticProps() {
     text,
     "avatar":avatar.asset->url
 }`;
+  const resumeQuery = `*[_type == 'resume'] | order(_createdAt desc) {
+    "resume":resume.asset->url
+  }[0]`;
 
   const projects = await client.fetch(projectQuery);
   const testimonials = await client.fetch(testimonialQuery);
+  const resume = await client.fetch(resumeQuery);
 
   return {
-    props: { projects, testimonials },
+    props: { projects, testimonials, resume },
     revalidate: 1,
   };
 }
