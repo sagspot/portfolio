@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <NextNProgress color="#161612" />
       <DefaultSeo {...SEO} />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <Component {...pageProps} />
       </AnimatePresence>
     </ChakraProvider>
