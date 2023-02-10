@@ -91,16 +91,25 @@ const Portfolio = ({ data }: { data: Portfolio[] }) => {
               </CardBody>
 
               <CardFooter w="full" as={ButtonGroup} justify="space-between">
-                <Button
-                  as={Link}
-                  href={project.github}
-                  bg="accent.100"
-                  _hover={{ textDecoration: 'none', bg: 'accent.50' }}
-                  disabled={!project.github}
-                  isExternal
-                >
-                  <Icon as={VscGithubAlt} mr={2} /> Code
-                </Button>
+                {!!project.github ? (
+                  <Button
+                    as={Link}
+                    href={project.github}
+                    bg="accent.100"
+                    _hover={{ textDecoration: 'none', bg: 'accent.50' }}
+                    isExternal
+                  >
+                    <Icon as={VscGithubAlt} mr={2} /> Code
+                  </Button>
+                ) : (
+                  <Button
+                    bg="accent.100"
+                    _hover={{ textDecoration: 'none', bg: 'accent.50' }}
+                    isDisabled={!project.github}
+                  >
+                    <Icon as={VscGithubAlt} mr={2} /> Code
+                  </Button>
+                )}
 
                 <Button
                   as={Link}
