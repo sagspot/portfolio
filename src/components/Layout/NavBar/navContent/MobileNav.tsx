@@ -1,9 +1,13 @@
 import { Collapse, Stack, useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
 import { navItems } from '../../../../data/nav';
 import MobileNavItem from './MobileNavItem';
 
-const MobileNav = ({ isOpen }: { isOpen: boolean }) => {
+interface Props {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const MobileNav = ({ isOpen,onClose }: Props) => {
   return (
     <Collapse in={isOpen} animateOpacity>
       <Stack
@@ -12,7 +16,7 @@ const MobileNav = ({ isOpen }: { isOpen: boolean }) => {
         display={{ md: 'none' }}
       >
         {navItems.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
+          <MobileNavItem key={navItem.label} onClose={onClose} {...navItem} />
         ))}
       </Stack>
     </Collapse>

@@ -2,7 +2,11 @@ import { Flex, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 import { NavItem } from '../../../../data/nav';
 
-const MobileNavItem = ({ label, href }: NavItem) => {
+interface Props extends NavItem {
+  onClose: () => void;
+}
+
+const MobileNavItem = ({ label, href, onClose }: Props) => {
   return (
     <Stack spacing={4}>
       <Flex
@@ -12,6 +16,7 @@ const MobileNavItem = ({ label, href }: NavItem) => {
         justify="space-between"
         textTransform="uppercase"
         align="center"
+        onClick={onClose}
         _hover={{
           textDecoration: 'none',
         }}

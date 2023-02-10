@@ -14,7 +14,7 @@ import MobileNav from './navContent/MobileNav';
 
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onClose, onToggle } = useDisclosure();
 
   return (
     <Box position="sticky" top={0} zIndex={99} as="header">
@@ -66,7 +66,7 @@ const NavBar = () => {
         </Button>
       </Flex>
 
-      <MobileNav isOpen={isOpen} />
+      <MobileNav isOpen={isOpen} onClose={onClose} />
     </Box>
   );
 };
