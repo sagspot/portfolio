@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Flex,
-  GridItem,
   Heading,
   Icon,
   SimpleGrid,
@@ -47,20 +46,16 @@ const About = ({ resume }: { resume: string }) => {
           </Box>
         </Flex>
 
-        <SimpleGrid columns={3} spacing={6}>
+        <SimpleGrid columns={5} spacing={3}>
           {stacks.map((stack) => (
-            <GridItem key={stack.name}>
-              <Flex direction="column" align="center" justify="center">
-                <Text>{stack.name}</Text>
-                <Image
-                  src={stack.icon}
-                  alt={stack.name}
-                  width={50}
-                  height={50}
-                  style={{ objectFit: 'contain' }}
-                />
-              </Flex>
-            </GridItem>
+            <Image
+              key={stack.name}
+              src={stack.icon}
+              alt={stack.name}
+              width={50}
+              height={50}
+              style={{ objectFit: 'contain' }}
+            />
           ))}
         </SimpleGrid>
       </SimpleGrid>
