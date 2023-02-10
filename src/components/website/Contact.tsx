@@ -48,11 +48,11 @@ const Contact = () => {
       id="contact"
       px={[6, 8, 16]}
       py={[4, 6, 16]}
-      bg={useColorModeValue('blackAlpha.50', 'blue.800')}
+      // bg={useColorModeValue('blackAlpha.50', 'blue.800')}
       spacing={6}
     >
       <Heading as="h2" size="md" textAlign="center">
-        Contact Me
+        Get in Touch
       </Heading>
 
       <Stack
