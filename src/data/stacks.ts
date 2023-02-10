@@ -1,38 +1,42 @@
 export const stacks = [
   {
     name: 'Illustrator',
-    icon: '/logo/illustrator-logo.png',
+    icon: '/logo/illustrator.png',
   },
   {
     name: 'Photoshop',
-    icon: '/logo/photoshop-logo.png',
+    icon: '/logo/photoshop.png',
   },
   {
     name: 'Figma',
-    icon: '/logo/figma-logo.png',
+    icon: '/logo/figma.png',
+  },
+  {
+    name: 'Wordpress',
+    icon: '/logo/wordpress.png',
   },
   {
     name: 'React',
-    icon: '/logo/react-logo.png',
+    icon: '/logo/react.png',
   },
   {
     name: 'Express',
-    icon: '/logo/express-logo.png',
-  },
-  {
-    name: 'MongoDB',
-    icon: '/logo/mongodb-logo.png',
+    icon: '/logo/express.png',
   },
   {
     name: 'NextJs',
-    icon: '/logo/nextjs-logo.png',
+    icon: '/logo/nextjs.png',
   },
   {
     name: 'Typescript',
-    icon: '/logo/typescript-logo.jpg',
+    icon: '/logo/typescript.jpg',
+  },
+  {
+    name: 'MongoDB',
+    icon: '/logo/mongodb.png',
   },
   {
     name: 'Git',
-    icon: '/logo/git-logo.png',
+    icon: '/logo/git.png',
   },
 ];
