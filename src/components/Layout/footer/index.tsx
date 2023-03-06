@@ -12,7 +12,7 @@ import Image from 'next/image';
 import { socialItems } from '../../../data/nav';
 
 const Footer = () => {
-  const bg = useColorModeValue('brand.100', 'brand.300');
+  const bg = useColorModeValue('brand.700', 'brand.900');
   return (
     <Box as="footer" position="relative" px={8} py={[2, 1]} bg={bg} zIndex={1}>
       <Stack
@@ -45,7 +45,7 @@ const Footer = () => {
           ))}
         </HStack>
 
-        <Text color="brand.10">
+        <Text color="brand.100">
           &copy; {new Date().getFullYear()} Oliver Sagala. All rights reserved.
         </Text>
       </Stack>

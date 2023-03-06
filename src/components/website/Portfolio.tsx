@@ -31,7 +31,7 @@ const Portfolio = ({ data }: { data: Portfolio[] }) => {
         My Portfolio
       </Heading>
 
-      <SimpleGrid columns={[1, 2, 3]} spacing={10} mt={8}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10} mt={8}>
         {data.map((project) => (
           <Flex justify="center" align="center" key={project._id}>
             <Card

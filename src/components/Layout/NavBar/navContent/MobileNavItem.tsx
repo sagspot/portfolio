@@ -23,7 +23,7 @@ const MobileNavItem = ({ label, href, onClose }: Props) => {
       >
         <Text
           fontWeight={500}
-          color={useColorModeValue('brand.100', 'gray.200')}
+          color={useColorModeValue('brand.700', 'brand.100')}
         >
           {label}
         </Text>

@@ -16,15 +16,15 @@ const NavBar = () => {
   const { isOpen, onClose, onToggle } = useDisclosure();
 
   return (
-    <Box position="sticky" top={0} zIndex={99} as="header">
+    <Box position="sticky" top={0} zIndex={99} as="header" shadow="lg">
       <Flex
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         align="center"
         shadow="base"
-        bg={useColorModeValue('white', 'brand.300')}
-        color={useColorModeValue('gray.600', 'white')}
+        bg={useColorModeValue('white', 'brand.700')}
+        color={useColorModeValue('brand.700', 'brand.100')}
       >
         <Flex
           flex={{ base: 1, md: 'auto' }}

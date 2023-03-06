@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { navItems } from '../../../../data/nav';
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('brand.100', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
+  const linkColor = useColorModeValue('brand.700', 'brand.100');
+  const linkHoverColor = useColorModeValue('brand.400', 'white');
   return (
     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
       <Stack direction={'row'} spacing={4}>
@@ -18,10 +18,7 @@ const DesktopNav = () => {
               fontWeight={500}
               color={linkColor}
               textTransform="uppercase"
-              _hover={{
-                textDecoration: 'none',
-                color: linkHoverColor,
-              }}
+              _hover={{ color: linkHoverColor, textDecoration: 'underline' }}
             >
               {navItem.label}
             </Text>

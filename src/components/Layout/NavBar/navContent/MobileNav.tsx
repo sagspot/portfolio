@@ -7,11 +7,11 @@ interface Props {
   onClose: () => void;
 }
 
-const MobileNav = ({ isOpen,onClose }: Props) => {
+const MobileNav = ({ isOpen, onClose }: Props) => {
   return (
     <Collapse in={isOpen} animateOpacity>
       <Stack
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue('white', 'brand.700')}
         p={4}
         display={{ md: 'none' }}
       >
