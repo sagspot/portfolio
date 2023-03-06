@@ -8,14 +8,17 @@ import {
   useColorModeValue,
   VStack,
 } from '@chakra-ui/react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useCallback } from 'react';
-import Particles from 'react-tsparticles';
+// import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import type { Engine } from 'tsparticles-engine';
 import { ISourceOptions } from 'tsparticles-engine';
 import particlesConfig from '../../data/particlesConfig.json';
 import styles from './Particles.module.css';
+
+const Particles = dynamic(() => import('react-tsparticles'), { ssr: false });
 
 const Hero = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
