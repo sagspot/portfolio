@@ -9,13 +9,12 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import React from 'react';
 import { socialItems } from '../../../data/nav';
 
 const Footer = () => {
   const bg = useColorModeValue('brand.100', 'brand.300');
   return (
-    <Box bg={bg} px={8} py={[2, 1]} as="footer">
+    <Box as="footer" position="relative" px={8} py={[2, 1]} bg={bg} zIndex={1}>
       <Stack
         spacing={4}
         direction={['column', 'row']}
