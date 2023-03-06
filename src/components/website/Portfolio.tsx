@@ -78,6 +78,7 @@ const Portfolio = ({ data }: { data: Portfolio[] }) => {
                       fill
                       draggable={false}
                       style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 352px) 80vw, 352px"
                     />
                   </Box>
                 </Card>

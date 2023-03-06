@@ -6,7 +6,7 @@ import {
   Text,
   useBreakpointValue,
   useColorModeValue,
-  VStack,
+  VStack
 } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -15,6 +15,7 @@ import { useCallback } from 'react';
 import { loadFull } from 'tsparticles';
 import type { Engine } from 'tsparticles-engine';
 import { ISourceOptions } from 'tsparticles-engine';
+import profilePic from '../../../public/sagala.jpg';
 import particlesConfig from '../../data/particlesConfig.json';
 import styles from './Particles.module.css';
 
@@ -63,10 +64,10 @@ const Hero = () => {
             borderColor="whiteAlpha.800"
           >
             <Image
-              src="/sagala.jpg"
+              src={profilePic}
               alt="Oliver Sagala portrait"
-              fill
               style={{ objectFit: 'contain' }}
+              placeholder="blur"
             />
           </Box>
           <Text

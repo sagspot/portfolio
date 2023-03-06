@@ -53,7 +53,7 @@ const About = ({ resume }: { resume: string }) => {
               alt={stack.name}
               width={50}
               height={50}
-              style={{ objectFit: 'contain' }}
+              style={{ objectFit: 'contain', width: 'auto', height: 'auto' }}
             />
           ))}
         </SimpleGrid>
