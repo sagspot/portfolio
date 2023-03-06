@@ -1,7 +1,6 @@
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
   Box,
-  Button,
   Flex,
   IconButton,
   useColorMode,
@@ -37,8 +36,8 @@ const NavBar = () => {
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
+            variant="ghost"
+            aria-label="Toggle Navigation"
           />
         </Flex>
 
@@ -61,9 +60,12 @@ const NavBar = () => {
           <DesktopNav />
         </Flex>
 
-        <Button onClick={toggleColorMode} variant="ghost">
-          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-        </Button>
+        <IconButton
+          onClick={toggleColorMode}
+          variant="ghost"
+          aria-label="Toggle Theme"
+          icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        />
       </Flex>
 
       <MobileNav isOpen={isOpen} onClose={onClose} />

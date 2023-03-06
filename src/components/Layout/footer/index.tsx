@@ -31,10 +31,15 @@ const Footer = () => {
         </Box>
 
         <HStack spacing={4}>
-          {socialItems.map((item) => (
-            <Link key={item.label} href={item.href} isExternal>
+          {socialItems.map(({ icon, href, label }) => (
+            <Link
+              key={label}
+              href={href}
+              aria-label={`Open ${label}`}
+              isExternal
+            >
               <Circle size={8} color={bg} bg="brand.10">
-                <Icon as={item.icon} boxSize={4} />
+                <Icon as={icon} boxSize={4} />
               </Circle>
             </Link>
           ))}
