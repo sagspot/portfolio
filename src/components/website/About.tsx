@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Container,
   Flex,
   Heading,
   Icon,
@@ -14,7 +15,13 @@ import { stacks } from '../../data/stacks';
 
 const About = ({ resume }: { resume: string }) => {
   return (
-    <Box as="section" id="about" my={[6, 8, 10]} px={[6, 8, 16]} py={[4, 6, 8]}>
+    <Container
+      maxW="7xl"
+      as="section"
+      id="about"
+      my={[6, 8, 10]}
+      py={[4, 6, 8]}
+    >
       <SimpleGrid columns={[1, null, 2]} spacing={[8, null, 32]}>
         <Flex direction="column">
           <Heading as="h2" size="md">
@@ -51,7 +58,7 @@ const About = ({ resume }: { resume: string }) => {
           ))}
         </SimpleGrid>
       </SimpleGrid>
-    </Box>
+    </Container>
   );
 };
 

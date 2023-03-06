@@ -1,6 +1,7 @@
 import {
   Box,
   Circle,
+  Container,
   HStack,
   Icon,
   Link,
@@ -14,8 +15,10 @@ import { socialItems } from '../../../data/nav';
 const Footer = () => {
   const bg = useColorModeValue('brand.700', 'brand.900');
   return (
-    <Box as="footer" position="relative" px={8} py={[2, 1]} bg={bg} zIndex={1}>
-      <Stack
+    <Box as="footer" position="relative" py={[2, 1]} bg={bg} zIndex={1}>
+      <Container
+        maxW="7xl"
+        as={Stack}
         spacing={4}
         direction={['column', 'row']}
         justifyContent="space-between"
@@ -48,7 +51,7 @@ const Footer = () => {
         <Text color="brand.100">
           &copy; {new Date().getFullYear()} Oliver Sagala. All rights reserved.
         </Text>
-      </Stack>
+      </Container>
     </Box>
   );
 };
