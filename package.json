@@ -21,7 +21,6 @@
   "homepage": "https://github.com/sagspot/portfolio#readme",
   "description": "",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.4.9",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -40,6 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
+    "@types/react": "^18.0.28",
     "eslint": "^8.33.0",
     "eslint-config-next": "^13.1.6",
     "ts-node": "^10.9.1",
