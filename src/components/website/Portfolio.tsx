@@ -95,16 +95,15 @@ const Portfolio = ({ data }: { data: Portfolio[] }) => {
                   <Button
                     as={Link}
                     href={project.github}
-                    bg="accent.100"
-                    _hover={{ textDecoration: 'none', bg: 'accent.50' }}
+                    _hover={{ textDecoration: 'none' }}
+                    aria-label={`View source code for ${project.title}`}
                     isExternal
                   >
                     <Icon as={VscGithubAlt} mr={2} /> Code
                   </Button>
                 ) : (
                   <Button
-                    bg="accent.100"
-                    _hover={{ textDecoration: 'none', bg: 'accent.50' }}
+                    _hover={{ textDecoration: 'none' }}
                     isDisabled={!project.github}
                   >
                     <Icon as={VscGithubAlt} mr={2} /> Code
@@ -114,9 +113,9 @@ const Portfolio = ({ data }: { data: Portfolio[] }) => {
                 <Button
                   as={Link}
                   href={project.previewUrl}
-                  bg="accent.100"
-                  _hover={{ textDecoration: 'none', bg: 'accent.50' }}
+                  _hover={{ textDecoration: 'none' }}
                   disabled={!project.previewUrl}
+                  aria-label={`Preview ${project.title}`}
                   isExternal
                 >
                   <ExternalLinkIcon mr={2} /> Preview

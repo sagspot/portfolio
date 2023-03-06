@@ -31,14 +31,7 @@ const About = ({ resume }: { resume: string }) => {
           </Text>
 
           <Box>
-            <Button
-              as={Link}
-              href={resume}
-              mt={4}
-              bg="accent.100"
-              _hover={{ bg: 'accent.50' }}
-              download
-            >
+            <Button as={Link} href={resume} mt={4} download>
               <Icon as={GoFilePdf} mr={2} boxSize={4} />
               Download my Resume
             </Button>
