@@ -1,14 +1,18 @@
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
   Box,
   Container,
   Flex,
+  Icon,
   IconButton,
   useColorMode,
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { BsFillMoonFill } from 'react-icons/bs';
+import { FiSun } from 'react-icons/fi';
+import { VscClose } from 'react-icons/vsc';
 import DesktopNav from './navContent/DesktopNav';
 import MobileNav from './navContent/MobileNav';
 
@@ -31,13 +35,7 @@ const NavBar = () => {
           >
             <IconButton
               onClick={onToggle}
-              icon={
-                isOpen ? (
-                  <CloseIcon w={3} h={3} />
-                ) : (
-                  <HamburgerIcon w={5} h={5} />
-                )
-              }
+              icon={<Icon as={isOpen ? VscClose : AiOutlineMenu} boxSize={4} />}
               variant="ghost"
               aria-label="Toggle Navigation"
             />
@@ -66,7 +64,8 @@ const NavBar = () => {
             onClick={toggleColorMode}
             variant="ghost"
             aria-label="Toggle Theme"
-            icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            icon={<Icon as={colorMode === 'light' ? BsFillMoonFill : FiSun} />}
+            // icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
           />
         </Container>
       </Flex>

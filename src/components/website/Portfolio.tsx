@@ -1,4 +1,3 @@
-import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
@@ -9,13 +8,13 @@ import {
   Container,
   Flex,
   Heading,
-  Icon,
   Link,
   SimpleGrid,
   Text,
   useColorModeValue as mode,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { TbExternalLink } from 'react-icons/tb';
 import { VscGithubAlt } from 'react-icons/vsc';
 import { Portfolio } from '../../types';
 
@@ -99,16 +98,18 @@ const Portfolio = ({ data }: { data: Portfolio[] }) => {
                       href={project.github}
                       _hover={{ textDecoration: 'none' }}
                       aria-label={`View source code for ${project.title}`}
+                      leftIcon={<VscGithubAlt />}
                       isExternal
                     >
-                      <Icon as={VscGithubAlt} mr={2} /> Code
+                      Code
                     </Button>
                   ) : (
                     <Button
                       _hover={{ textDecoration: 'none' }}
                       isDisabled={!project.github}
+                      leftIcon={<VscGithubAlt />}
                     >
-                      <Icon as={VscGithubAlt} mr={2} /> Code
+                      Code
                     </Button>
                   )}
 
@@ -119,8 +120,9 @@ const Portfolio = ({ data }: { data: Portfolio[] }) => {
                     disabled={!project.previewUrl}
                     aria-label={`Preview ${project.title}`}
                     isExternal
+                    leftIcon={<TbExternalLink />}
                   >
-                    <ExternalLinkIcon mr={2} /> Preview
+                    Preview
                   </Button>
                 </CardFooter>
               </Card>

@@ -2,22 +2,12 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
 import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
 import Script from 'next/script';
-import NextNProgress from 'nextjs-progressbar';
-import React from 'react';
 import SEO from '../../next-seo.config';
-import { GTM_ID, pageview } from '../lib/gtm';
+import { GTM_ID } from '../lib/gtm';
 import theme from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  React.useEffect(() => {
-    router.events.on('routeChangeComplete', pageview);
-    return () => {
-      router.events.off('routeChangeComplete', pageview);
-    };
-  }, [router.events]);
   return (
     <ChakraProvider theme={theme}>
       <Script
@@ -33,7 +23,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           `,
         }}
       />
-      <NextNProgress color="#161612" />
+      <Script
+        id="gtag-dataLayer"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: 'window.dataLayer = window.dataLayer || [];',
+        }}
+      />
       <DefaultSeo {...SEO} />
       <AnimatePresence mode="wait">
         <Component {...pageProps} />
