@@ -1,8 +1,8 @@
 // import { GoogleTagManager } from '@next/third-parties/google';
+import '@/styles/globals.css';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
-// import '../styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
