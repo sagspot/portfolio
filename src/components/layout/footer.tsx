@@ -1,17 +1,12 @@
 import { socialItems } from '@/data/nav';
-import Image from 'next/image';
 import Link from 'next/link';
+import Logo from './logo';
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 py-2 sm:py-1 bg-primary">
+    <footer className="relative z-10 py-2 sm:py-1 bg-slate-200 dark:bg-slate-900">
       <div className="container grid items-center grid-cols-1 gap-4 justify-items-center md:grid-cols-3 max-w-7xl">
-        <Image
-          src="/logo-white.png"
-          alt="sagspot logo"
-          width={150}
-          height={41}
-        />
+        <Logo />
 
         <div className="flex items-center gap-4">
           {socialItems.map(({ href, label, ...rest }) => (
@@ -27,7 +22,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="text-primary-foreground">
+        <p className="">
           &copy; {new Date().getFullYear()} Oliver Sagala. All rights reserved.
         </p>
       </div>

@@ -12,7 +12,40 @@ beautiful and intuitive interface designs. I am passionate about
 transforming lives through tech. I believe tech should ultimately
 make life easier`;
 
-const projects: IPortfolio[] = [];
+const projects: IPortfolio[] = [
+  {
+    _id: '1',
+    title: 'Portfolio',
+    description: 'My personal portfolio website',
+    github: 'https://github.com/sagspot',
+    mainImage: '/no-image.jpg',
+    previewUrl: 'https://sagspot.co.ke',
+  },
+  {
+    _id: '2',
+    title: 'Project 2',
+    description: 'My personal portfolio website',
+    // github: 'https://github.com/sagspot',
+    mainImage: '/no-image.jpg',
+    previewUrl: 'https://sagspot.co.ke',
+  },
+  {
+    _id: '3',
+    title: 'Project 3',
+    description: 'My personal portfolio website',
+    github: 'https://github.com/sagspot',
+    mainImage: '/no-image.jpg',
+    // previewUrl: 'https://sagspot.co.ke',
+  },
+  {
+    _id: '4',
+    title: 'Project 4',
+    description: 'My personal portfolio website',
+    // github: 'https://github.com/sagspot',
+    mainImage: '/no-image.jpg',
+    // previewUrl: 'https://sagspot.co.ke',
+  },
+];
 
 export default function Page() {
   return (

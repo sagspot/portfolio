@@ -19,10 +19,10 @@ export const navItems: NavItem[] = [
     label: 'Portfolio',
     href: '/#portfolio',
   },
-  {
-    label: 'Testimonials',
-    href: '/#testimonials',
-  },
+  // {
+  //   label: 'Testimonials',
+  //   href: '/#testimonials',
+  // },
   {
     label: 'Contact',
     href: '/#contact',
