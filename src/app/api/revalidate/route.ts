@@ -6,8 +6,8 @@ import { NextResponse, type NextRequest } from 'next/server';
 const revalidateSecret = process.env.SANITY_REVALIDATE_SECRET;
 
 export async function POST(req: NextRequest) {
-    try {
-      /**
+  try {
+    /**
        *  if (req.headers['x-validation-secret'] !== process.env.REVALIDATE_TOKEN)
           return res.status(401).json({ message: 'Invalid token' });
        */
@@ -15,8 +15,6 @@ export async function POST(req: NextRequest) {
       req,
       revalidateSecret
     );
-
-    console.log({ isValidSignature, body });
 
     if (!isValidSignature) {
       const message = 'Invalid signature';
