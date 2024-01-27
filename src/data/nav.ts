@@ -19,23 +19,13 @@ export const navItems: NavItem[] = [
     label: 'Portfolio',
     href: '/#portfolio',
   },
-  // {
-  //   label: 'Testimonials',
-  //   href: '/#testimonials',
-  // },
   {
     label: 'Contact',
     href: '/#contact',
   },
 ];
 
-interface SocialItems {
-  label: string;
-  href: string;
-  icon: any;
-}
-
-export const socialItems: SocialItems[] = [
+export const socialItems = [
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/sagspot',
