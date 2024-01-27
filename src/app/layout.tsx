@@ -1,8 +1,9 @@
-// import { GoogleTagManager } from '@next/third-parties/google';
 import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
+import { GTM_ID } from '@/lib/gtm';
 import { ThemeProvider } from '@/providers/theme-provider';
 import '@/styles/globals.css';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
@@ -56,7 +57,16 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [siteConfig.logo],
+    images: [
+      siteConfig.logo,
+      {
+        url: `${siteConfig.url}/sagala.jpg`,
+        width: 600,
+        height: 600,
+        alt: 'Oliver Sagala',
+        type: 'image/jpeg',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -87,7 +97,7 @@ export default async function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
-      {/* <GoogleTagManager gtmId={env.GTM_ID} /> */}
+      <GoogleTagManager gtmId={GTM_ID} />
     </html>
   );
 }
