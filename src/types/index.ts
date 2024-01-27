@@ -1,18 +1,19 @@
-export interface PortfolioType {
-  _id: string;
-  title: string;
-  img: string;
-  desc: string;
-  source?: string;
-  url: string;
-  category?: 'api' | 'website';
-}
-
-export interface Portfolio {
+export interface IPortfolio {
   _id: string;
   title: string;
   description: string;
-  github: string;
-  previewUrl: string;
+  github?: string;
+  previewUrl?: string;
   mainImage: string;
+  priority?: number;
 }
+
+export type ResponseType<T> =
+  | {
+      success: 'true';
+      data: T;
+    }
+  | {
+      success: 'false';
+      error: string;
+    };
