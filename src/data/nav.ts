@@ -3,7 +3,7 @@ import { RiLinkedinFill } from 'react-icons/ri';
 
 export interface NavItem {
   label: string;
-  href?: string;
+  href: string;
 }
 
 export const navItems: NavItem[] = [
@@ -17,7 +17,7 @@ export const navItems: NavItem[] = [
   },
   {
     label: 'Portfolio',
-    href: '#portfolio',
+    href: '/#portfolio',
   },
   {
     label: 'Testimonials',

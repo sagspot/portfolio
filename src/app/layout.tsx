@@ -1,4 +1,7 @@
 // import { GoogleTagManager } from '@next/third-parties/google';
+import Footer from '@/components/layout/footer';
+import Header from '@/components/layout/header';
+import { ThemeProvider } from '@/providers/theme-provider';
 import '@/styles/globals.css';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -73,14 +76,16 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
-        {children}
-        {/* </ThemeProvider> */}
+        >
+          <Header />
+          <main className="min-h-[calc(100vh-110px)]">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
       {/* <GoogleTagManager gtmId={env.GTM_ID} /> */}
     </html>
