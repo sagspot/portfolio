@@ -1,3 +1,10 @@
+import React from 'react';
+import Hero from './hero';
+
 export default function Page() {
-  return <div>Page</div>;
+  return (
+    <React.Fragment>
+      <Hero />
+    </React.Fragment>
+  );
 }
