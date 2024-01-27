@@ -8,11 +8,11 @@ export interface PortfolioType {
   category?: 'api' | 'website';
 }
 
-export interface Portfolio {
+export interface IPortfolio {
   _id: string;
   title: string;
   description: string;
-  github: string;
-  previewUrl: string;
+  github?: string;
+  previewUrl?: string;
   mainImage: string;
 }

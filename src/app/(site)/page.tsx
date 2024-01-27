@@ -1,3 +1,4 @@
+import type { IPortfolio } from '@/types';
 import React from 'react';
 import About from './about';
 import Contact from './contact';
@@ -11,12 +12,14 @@ beautiful and intuitive interface designs. I am passionate about
 transforming lives through tech. I believe tech should ultimately
 make life easier`;
 
+const projects: IPortfolio[] = [];
+
 export default function Page() {
   return (
     <React.Fragment>
       <Hero />
       <About resume="/resume" about={about} />
-      <Portfolio />
+      <Portfolio projects={projects} />
       <Contact />
     </React.Fragment>
   );
